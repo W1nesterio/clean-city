@@ -22,3 +22,12 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+composer.phar
+
+_codex_work/
+_codex_report_work/
+cloudflare-env-patch/
+.jez/
+
+database/sql/
+*.sql
