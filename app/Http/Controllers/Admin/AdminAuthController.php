@@ -26,9 +26,13 @@ class AdminAuthController extends Controller
             'password' => ['required', 'string'],
         ]);
 
-        $user = User::where('email', $data['email'])->first();
+        // Убираем случайные пробелы и приводим email к нижнему регистру
+        $email = mb_strtolower(trim($data['email']));
+        $password = $data['password'];
 
-        if (!$user || !Hash::check($data['password'], $user->password)) {
+        $user = User::where('email', $email)->first();
+
+        if (!$user || !Hash::check($password, $user->password)) {
             return back()
                 ->withErrors(['email' => 'Неверный email или пароль'])
                 ->withInput();
