@@ -37,6 +37,7 @@ Route::middleware('api.token')->group(function () {
     Route::post('/tickets', [TicketController::class, 'store']);
     Route::get('/tickets/my', [TicketController::class, 'myTickets']);
     Route::get('/tickets/{ticket}', [TicketController::class, 'show']);
+    Route::delete('/tickets/{ticket}', [TicketController::class, 'destroy']);
     Route::post('/tickets/{ticket}/status', [TicketController::class, 'changeStatus']);
     Route::post('/tickets/{ticket}/photo-after', [TicketController::class, 'uploadAfterPhoto']);
 

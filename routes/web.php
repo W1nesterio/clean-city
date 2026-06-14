@@ -74,6 +74,7 @@ Route::get('/admin/tickets/map', [AdminTicketController::class, 'map'])->name('a
 Route::get('/admin/tickets/{ticket}', [AdminTicketController::class, 'show'])->name('admin.tickets.show');
 Route::post('/admin/tickets/{ticket}/assign', [AdminTicketController::class, 'assign'])->name('admin.tickets.assign');
 Route::post('/admin/tickets/{ticket}/status', [AdminTicketController::class, 'changeStatus'])->name('admin.tickets.status');
+Route::post('/admin/tickets/{ticket}/delete', [AdminTicketController::class, 'softDelete'])->name('admin.tickets.delete');
 Route::post('/admin/tickets/{ticket}/hide', [AdminTicketController::class, 'hide'])->name('admin.tickets.hide');
 Route::post('/admin/tickets/{ticket}/restore', [AdminTicketController::class, 'restore'])->name('admin.tickets.restore');
 Route::post('/admin/tickets/{ticket}/toggle-resident', [AdminTicketController::class, 'toggleResidentAvailability'])->name('admin.tickets.toggle-resident');

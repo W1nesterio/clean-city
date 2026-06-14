@@ -99,6 +99,34 @@ class TicketController extends Controller
         ]);
     }
 
+    public function destroy(Request $request, Ticket $ticket)
+    {
+        $user = $request->user();
+
+        if ($user->role !== 'resident' || (int) $ticket->user_id !== (int) $user->id) {
+            return response()->json(['message' => 'Удаление доступно только автору заявки'], 403);
+        }
+
+        if ($ticket->deleted_at) {
+            return response()->json(['message' => 'Заявка уже удалена из истории']);
+        }
+
+        $ticket->deleted_at = now();
+        $ticket->deleted_by_user_id = $user->id;
+        $ticket->delete_reason = 'Удалено пользователем из истории';
+        $ticket->save();
+
+        $this->writeHistory(
+            $ticket,
+            $ticket->status,
+            $ticket->status,
+            $user->id,
+            'Заявка удалена пользователем из истории'
+        );
+
+        return response()->json(['message' => 'Заявка удалена из истории']);
+    }
+
     public function workerTickets(Request $request)
     {
         $user = $request->user();
@@ -237,15 +265,8 @@ class TicketController extends Controller
             $data['comment'] ?? null
         );
 
-        // Award points to ticket author when newly completed
-        if ($data['status'] === 'completed' && !$wasAlreadyCompleted && $ticket->user_id) {
-            $completionPoints = PointsService::pointsForCompletion();
-            if ($completionPoints > 0) {
-                $author = User::find($ticket->user_id);
-                if ($author && $author->role === 'resident') {
-                    PointsService::award($author, $completionPoints, "Выполнена заявка #{$ticket->id}");
-                }
-            }
+        if ($data['status'] === 'completed' && !$wasAlreadyCompleted) {
+            $this->awardCompletionPoints($ticket, $request->user());
         }
 
         return response()->json([
@@ -274,6 +295,7 @@ class TicketController extends Controller
         ]);
 
         $oldStatus = $ticket->status;
+        $wasAlreadyCompleted = $oldStatus === 'completed';
         $ticket->status = 'completed';
         $ticket->closed_at = now();
 
@@ -294,13 +316,8 @@ class TicketController extends Controller
             $data['comment'] ?? 'Заявка закрыта с фото после выполнения'
         );
 
-        // Award points to ticket author on completion
-        $completionPoints = PointsService::pointsForCompletion();
-        if ($completionPoints > 0 && $ticket->user_id) {
-            $author = User::find($ticket->user_id);
-            if ($author && $author->role === 'resident') {
-                PointsService::award($author, $completionPoints, "Выполнена заявка #{$ticket->id}");
-            }
+        if (!$wasAlreadyCompleted) {
+            $this->awardCompletionPoints($ticket, $request->user());
         }
 
         return response()->json([
@@ -504,6 +521,32 @@ class TicketController extends Controller
             'assignedOrganization',
             'assignedWorker',
         ]);
+    }
+
+    private function awardCompletionPoints(Ticket $ticket, ?User $actor): void
+    {
+        $completionPoints = PointsService::pointsForCompletion();
+        if ($completionPoints <= 0) {
+            return;
+        }
+
+        if ($ticket->user_id) {
+            $author = User::find($ticket->user_id);
+            if ($author && $author->role === 'resident') {
+                PointsService::award($author, $completionPoints, "Выполнена заявка #{$ticket->id}");
+            }
+        }
+
+        $worker = null;
+        if ($actor && $actor->role === 'worker') {
+            $worker = $actor;
+        } elseif ($ticket->assigned_worker_id) {
+            $worker = User::find($ticket->assigned_worker_id);
+        }
+
+        if ($worker && $worker->role === 'worker') {
+            PointsService::award($worker, $completionPoints, "Выполнение заявки #{$ticket->id}");
+        }
     }
 
     private function writeHistory(Ticket $ticket, ?string $oldStatus, string $newStatus, ?int $changedByUserId, ?string $comment): void

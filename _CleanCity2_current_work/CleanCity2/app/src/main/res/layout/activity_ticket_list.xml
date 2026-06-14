@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_bottom_rounded"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:paddingStart="22dp"
+        android:paddingTop="48dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/listBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="#26FFFFFF"
+            android:minWidth="0dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="16dp"
+            android:text="← Назад"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:cornerRadius="18dp" />
+
+        <TextView
+            android:id="@+id/listTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Мои заявки"
+            android:textColor="@color/white"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/listSubtitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="История обращений и текущие статусы"
+            android:textColor="#E8FFF1"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/openRoutePlannerButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#111827"
+            android:text="Маршрут"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:cornerRadius="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/openTaskMapButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green_main"
+            android:text="Карта"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:cornerRadius="16dp" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/workerTabsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEF4F0"
+        android:fillViewport="false"
+        android:overScrollMode="never"
+        android:paddingLeft="16dp"
+        android:paddingTop="14dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/workerTabsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+    </HorizontalScrollView>
+
+    <ProgressBar
+        android:id="@+id/listProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/ticketsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@drawable/bg_bottom_nav"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/navHomeTextView"
+            style="@style/BottomNavItem"
+            android:text="Главная" />
+
+        <TextView
+            android:id="@+id/navTasksTextView"
+            style="@style/BottomNavItem"
+            android:text="Задачи" />
+
+        <TextView
+            android:id="@+id/navRouteTextView"
+            style="@style/BottomNavItem"
+            android:text="Маршрут" />
+
+        <TextView
+            android:id="@+id/navMapTextView"
+            style="@style/BottomNavItem"
+            android:text="Карта" />
+
+        <TextView
+            android:id="@+id/navProfileTextView"
+            style="@style/BottomNavItem"
+            android:visibility="gone"
+            android:text="Профиль" />
+    </LinearLayout>
+
+</LinearLayout>

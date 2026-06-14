@@ -94,11 +94,15 @@
                         @endif
                     </td>
                     <td class="row-actions">
+                        @if($admin->role !== 'org_admin' || (int) $reward->organization_id === (int) $admin->organization_id)
                         <a href="{{ route('admin.rewards.edit', $reward) }}" class="btn ghost sm">Редактировать</a>
                         <form method="POST" action="{{ route('admin.rewards.destroy', $reward) }}" style="display:inline-flex;margin-left:4px;" onsubmit="return confirm('Удалить вознаграждение «{{ addslashes($reward->title) }}»?')">
                             @csrf @method('DELETE')
                             <button type="submit" class="btn danger-ghost sm">Удалить</button>
                         </form>
+                        @else
+                            <span class="pill pill-gray no-dot">Общий</span>
+                        @endif
                     </td>
                 </tr>
                 @endforeach

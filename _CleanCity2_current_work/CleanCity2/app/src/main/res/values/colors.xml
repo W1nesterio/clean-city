@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="green_dark">#0F5132</color>
+    <color name="green_main">#146C43</color>
+    <color name="green_soft">#22C55E</color>
+    <color name="green_light">#DFF5E6</color>
+    <color name="bg_light">#EEF4F0</color>
+    <color name="card_white">#FFFFFF</color>
+    <color name="text_dark">#1F2933</color>
+    <color name="text_gray">#6B7280</color>
+    <color name="line_light">#E5E7EB</color>
+    <color name="danger">#DC2626</color>
+</resources>

@@ -66,6 +66,7 @@
                 <div class="ticket-summary-item"><div class="info-label">Житель</div><div class="info-value">{{ $ticket->user->name ?? '—' }}</div></div>
                 <div class="ticket-summary-item wide"><div class="info-label">Описание</div><div class="info-value">{{ $ticket->description ?: 'Описание не указано' }}</div></div>
                 <div class="ticket-summary-item wide"><div class="info-label">Адрес</div><div class="info-value">{{ $ticket->address_text ?: 'Адрес не указан, используется точка на карте' }}</div></div>
+                <div class="ticket-summary-item wide"><div class="info-label">Координаты</div><div class="info-value">@if(!is_null($ticket->lat) && !is_null($ticket->lng)){{ $ticket->lat }}, {{ $ticket->lng }}@else Координаты не указаны @endif</div></div>
             </div>
         </div></div>
 
@@ -219,9 +220,9 @@
     workerSearch?.addEventListener('input', syncAssignWorkers);
     syncAssignWorkers();
 
-    const lat = {{ $ticket->lat ? (float) $ticket->lat : 'null' }};
-    const lng = {{ $ticket->lng ? (float) $ticket->lng : 'null' }};
-    if (lat && lng && window.L) {
+    const lat = {{ !is_null($ticket->lat) ? (float) $ticket->lat : 'null' }};
+    const lng = {{ !is_null($ticket->lng) ? (float) $ticket->lng : 'null' }};
+    if (lat !== null && lng !== null && window.L) {
         const map = L.map('ticketMap').setView([lat, lng], 15);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
         L.marker([lat, lng]).addTo(map).bindPopup('Обращение №{{ $ticket->id }}').openPopup();

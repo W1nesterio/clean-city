@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2800" height="1840" viewBox="0 0 2800 1840" role="img" aria-labelledby="title desc">
+  <title id="title">IDEF0 Clean City</title>
+  <desc id="desc">IDEF0 context and decomposition diagrams for the Clean City Laravel project.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.14"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/></marker>
+  </defs>
+  <style>
+    svg { background: #f6f8fb; }
+    .page-title { font-family: Segoe UI, Arial, sans-serif; font-size: 28px; font-weight: 800; fill: #0f172a; }
+    .page-subtitle { font-family: Segoe UI, Arial, sans-serif; font-size: 14px; fill: #475569; }
+    .section-title { font-family: Segoe UI, Arial, sans-serif; font-size: 20px; font-weight: 800; fill: #0f172a; }
+    .label { font-family: Segoe UI, Arial, sans-serif; font-size: 14px; fill: #0f172a; }
+    .arrow-label { font-family: Segoe UI, Arial, sans-serif; font-size: 13px; fill: #475569; }
+    .arrow { fill: none; stroke-width: 2.1; stroke-linecap: square; stroke-linejoin: miter; marker-end: url(#arrow); }
+    .function-box rect:first-child, .note rect:first-child { filter: url(#shadow); }
+    .box-border { fill: none; stroke: #b6c3d1; stroke-width: 1.2; }
+    .box-id { font-family: Segoe UI, Arial, sans-serif; font-size: 13px; font-weight: 800; fill: white; }
+    .box-title { font-family: Segoe UI, Arial, sans-serif; font-size: 20px; font-weight: 800; fill: #0f172a; }
+    .box-subtitle { font-family: Segoe UI, Arial, sans-serif; font-size: 13px; fill: #475569; }
+    .note-title { font-family: Segoe UI, Arial, sans-serif; font-size: 13px; font-weight: 800; fill: white; }
+    .note-text { font-family: Segoe UI, Arial, sans-serif; font-size: 13px; fill: #0f172a; }
+    .diagram-frame { fill: none; stroke: #cbd5e1; stroke-width: 1.2; stroke-dasharray: 8 8; }
+    .legend-title { font-family: Segoe UI, Arial, sans-serif; font-size: 15px; font-weight: 800; fill: #0f172a; }
+  </style>
+  <rect x="0" y="0" width="2800" height="1840" fill="#f6f8fb"/>
+  <text x="42" y="46" class="page-title" text-anchor="start"><tspan x="42" dy="0">IDEF0-модель проекта Clean City</tspan></text>
+  <text x="42" y="72" class="page-subtitle" text-anchor="start"><tspan x="42" dy="0">Контекст A-0 и декомпозиция A0 построены по маршрутам, моделям и контроллерам проекта.</tspan></text>
+  <rect x="40" y="115" width="1760" height="470" rx="6" class="diagram-frame"/>
+  <text x="64" y="150" class="section-title" text-anchor="start"><tspan x="64" dy="0">A-0 Контекст системы</tspan></text>
+  <g id="A-0" class="function-box">
+    <rect x="600" y="210" width="700" height="220" rx="4" fill="#fff"/>
+    <rect x="600" y="210" width="700" height="30" rx="4" fill="#0d6efd"/>
+    <path d="M 600 235 L 1300 235 L 1300 240 L 600 240 Z" fill="#0d6efd"/>
+    <text x="612" y="230" class="box-id">A-0</text>
+    <text x="950" y="268" class="box-title" text-anchor="middle"><tspan x="950" dy="0">Управлять городскими заявками и мотивацией жителей</tspan></text>
+    <text x="950" y="298" class="box-subtitle" text-anchor="middle"><tspan x="950" dy="26">Clean City: мобильное API + админ-панель + база данных</tspan></text>
+    <rect x="600" y="210" width="700" height="220" rx="4" class="box-border"/>
+  </g>
+  <rect x="40" y="635" width="2420" height="1110" rx="6" class="diagram-frame"/>
+  <text x="64" y="670" class="section-title" text-anchor="start"><tspan x="64" dy="0">A0 Декомпозиция верхнего уровня</tspan></text>
+  <g id="A1" class="function-box">
+    <rect x="170" y="760" width="410" height="190" rx="4" fill="#fff"/>
+    <rect x="170" y="760" width="410" height="30" rx="4" fill="#0d6efd"/>
+    <path d="M 170 785 L 580 785 L 580 790 L 170 790 Z" fill="#0d6efd"/>
+    <text x="182" y="780" class="box-id">A1</text>
+    <text x="375" y="818" class="box-title" text-anchor="middle"><tspan x="375" dy="0">Управлять пользователями и</tspan><tspan x="375" dy="21">доступом</tspan></text>
+    <text x="375" y="848" class="box-subtitle" text-anchor="middle"><tspan x="375" dy="26">регистрация, вход, роли, токены,</tspan><tspan x="375" dy="17">блокировки</tspan></text>
+    <rect x="170" y="760" width="410" height="190" rx="4" class="box-border"/>
+  </g>
+<g id="A2" class="function-box">
+    <rect x="730" y="760" width="410" height="190" rx="4" fill="#fff"/>
+    <rect x="730" y="760" width="410" height="30" rx="4" fill="#0d6efd"/>
+    <path d="M 730 785 L 1140 785 L 1140 790 L 730 790 Z" fill="#0d6efd"/>
+    <text x="742" y="780" class="box-id">A2</text>
+    <text x="935" y="818" class="box-title" text-anchor="middle"><tspan x="935" dy="0">Принимать и регистрировать</tspan><tspan x="935" dy="21">заявки</tspan></text>
+    <text x="935" y="848" class="box-subtitle" text-anchor="middle"><tspan x="935" dy="26">категория, адрес, координаты,</tspan><tspan x="935" dy="17">описание, фото</tspan></text>
+    <rect x="730" y="760" width="410" height="190" rx="4" class="box-border"/>
+  </g>
+<g id="A3" class="function-box">
+    <rect x="1290" y="760" width="410" height="190" rx="4" fill="#fff"/>
+    <rect x="1290" y="760" width="410" height="30" rx="4" fill="#0d6efd"/>
+    <path d="M 1290 785 L 1700 785 L 1700 790 L 1290 790 Z" fill="#0d6efd"/>
+    <text x="1302" y="780" class="box-id">A3</text>
+    <text x="1495" y="818" class="box-title" text-anchor="middle"><tspan x="1495" dy="0">Назначать и принимать в работу</tspan></text>
+    <text x="1495" y="848" class="box-subtitle" text-anchor="middle"><tspan x="1495" dy="26">организация, работник, заявки на</tspan><tspan x="1495" dy="17">взятие, доступность</tspan></text>
+    <rect x="1290" y="760" width="410" height="190" rx="4" class="box-border"/>
+  </g>
+<g id="A4" class="function-box">
+    <rect x="1290" y="1110" width="410" height="190" rx="4" fill="#fff"/>
+    <rect x="1290" y="1110" width="410" height="30" rx="4" fill="#0d6efd"/>
+    <path d="M 1290 1135 L 1700 1135 L 1700 1140 L 1290 1140 Z" fill="#0d6efd"/>
+    <text x="1302" y="1130" class="box-id">A4</text>
+    <text x="1495" y="1168" class="box-title" text-anchor="middle"><tspan x="1495" dy="0">Выполнять, контролировать и</tspan><tspan x="1495" dy="21">закрывать</tspan></text>
+    <text x="1495" y="1198" class="box-subtitle" text-anchor="middle"><tspan x="1495" dy="26">статусы, история, фото после,</tspan><tspan x="1495" dy="17">начисление баллов</tspan></text>
+    <rect x="1290" y="1110" width="410" height="190" rx="4" class="box-border"/>
+  </g>
+<g id="A5" class="function-box">
+    <rect x="1850" y="1110" width="410" height="190" rx="4" fill="#fff"/>
+    <rect x="1850" y="1110" width="410" height="30" rx="4" fill="#0d6efd"/>
+    <path d="M 1850 1135 L 2260 1135 L 2260 1140 L 1850 1140 Z" fill="#0d6efd"/>
+    <text x="1862" y="1130" class="box-id">A5</text>
+    <text x="2055" y="1168" class="box-title" text-anchor="middle"><tspan x="2055" dy="0">Обрабатывать жалобы и</tspan><tspan x="2055" dy="21">ограничения</tspan></text>
+    <text x="2055" y="1198" class="box-subtitle" text-anchor="middle"><tspan x="2055" dy="26">жалобы организаций, скрытия, баны,</tspan><tspan x="2055" dy="17">локальные блокировки</tspan></text>
+    <rect x="1850" y="1110" width="410" height="190" rx="4" class="box-border"/>
+  </g>
+<g id="A6" class="function-box">
+    <rect x="730" y="1450" width="520" height="210" rx="4" fill="#fff"/>
+    <rect x="730" y="1450" width="520" height="30" rx="4" fill="#0d6efd"/>
+    <path d="M 730 1475 L 1250 1475 L 1250 1480 L 730 1480 Z" fill="#0d6efd"/>
+    <text x="742" y="1470" class="box-id">A6</text>
+    <text x="990" y="1508" class="box-title" text-anchor="middle"><tspan x="990" dy="0">Публиковать контент, аналитику и</tspan><tspan x="990" dy="21">поощрения</tspan></text>
+    <text x="990" y="1538" class="box-subtitle" text-anchor="middle"><tspan x="990" dy="26">новости, награды, баллы, отчеты, экспорт</tspan></text>
+    <rect x="730" y="1450" width="520" height="210" rx="4" class="box-border"/>
+  </g>
+  <path d="M 80 285 L 600 285" class="arrow" style="stroke:#0891b2" marker-end="url(#arrow)"/>
+<text x="90" y="270" class="arrow-label" text-anchor="start"><tspan x="90" dy="0">Обращения жителей, фото, геоданные, заявки</tspan><tspan x="90" dy="18">работников, жалобы</tspan></text>
+<path d="M 1300 285 L 1760 285" class="arrow" style="stroke:#22a06b" marker-end="url(#arrow)"/>
+<text x="1325" y="270" class="arrow-label" text-anchor="start"><tspan x="1325" dy="0">Зарегистрированные и закрытые заявки,</tspan><tspan x="1325" dy="18">назначения, отчеты, новости, награды, баллы</tspan></text>
+<path d="M 820 90 L 820 210" class="arrow" style="stroke:#f97316" marker-end="url(#arrow)"/>
+<text x="835" y="105" class="arrow-label" text-anchor="start"><tspan x="835" dy="0">Роли и права, справочники, правила статусов,</tspan><tspan x="835" dy="18">настройки баллов, модерация</tspan></text>
+<path d="M 1010 560 L 1010 430" class="arrow" style="stroke:#8b5cf6" marker-end="url(#arrow)"/>
+<text x="1030" y="540" class="arrow-label" text-anchor="start"><tspan x="1030" dy="0">Механизмы: мобильное API, админ-панель,</tspan><tspan x="1030" dy="18">Laravel, БД, файловое хранилище, пользователи</tspan></text>
+<path d="M 60 850 L 170 850" class="arrow" style="stroke:#0891b2" marker-end="url(#arrow)"/>
+<text x="70" y="832" class="arrow-label" text-anchor="start"><tspan x="70" dy="0">Регистрация, логин, профиль, коды</tspan><tspan x="70" dy="18">работников</tspan></text>
+<path d="M 60 880 L 730 880" class="arrow" style="stroke:#0891b2" marker-end="url(#arrow)"/>
+<text x="70" y="906" class="arrow-label" text-anchor="start"><tspan x="70" dy="0">Данные заявки, координаты, фото</tspan></text>
+<path d="M 60 1335 L 1780 1335 L 1780 1188 L 1850 1188" class="arrow" style="stroke:#0891b2" marker-end="url(#arrow)"/>
+<text x="70" y="1315" class="arrow-label" text-anchor="start"><tspan x="70" dy="0">Жалобы и модерационные сигналы</tspan></text>
+<path d="M 60 1540 L 730 1540" class="arrow" style="stroke:#0891b2" marker-end="url(#arrow)"/>
+<text x="70" y="1520" class="arrow-label" text-anchor="start"><tspan x="70" dy="0">Новости, награды, ручные</tspan><tspan x="70" dy="18">корректировки баллов</tspan></text>
+<path d="M 260 605 L 260 680" class="arrow" style="stroke:#f97316" marker-end="url(#arrow)"/>
+<text x="272" y="618" class="arrow-label" text-anchor="start"><tspan x="272" dy="0">Политика ролей и доступа</tspan></text>
+<path d="M 865 605 L 865 680" class="arrow" style="stroke:#f97316" marker-end="url(#arrow)"/>
+<text x="877" y="618" class="arrow-label" text-anchor="start"><tspan x="877" dy="0">Категории, города, организации</tspan></text>
+<path d="M 1425 605 L 1425 680" class="arrow" style="stroke:#f97316" marker-end="url(#arrow)"/>
+<text x="1437" y="618" class="arrow-label" text-anchor="start"><tspan x="1437" dy="0">Правила назначения и видимости</tspan></text>
+<path d="M 1485 965 L 1485 1040" class="arrow" style="stroke:#f97316" marker-end="url(#arrow)"/>
+<text x="1497" y="978" class="arrow-label" text-anchor="start"><tspan x="1497" dy="0">Правила смены статусов</tspan></text>
+<path d="M 2055 965 L 2055 1040" class="arrow" style="stroke:#f97316" marker-end="url(#arrow)"/>
+<text x="2067" y="978" class="arrow-label" text-anchor="start"><tspan x="2067" dy="0">Правила модерации</tspan></text>
+<path d="M 990 1305 L 990 1380" class="arrow" style="stroke:#f97316" marker-end="url(#arrow)"/>
+<text x="1002" y="1318" class="arrow-label" text-anchor="start"><tspan x="1002" dy="0">Периоды отчетов и настройки</tspan><tspan x="1002" dy="18">баллов</tspan></text>
+<path d="M 370 1070 L 370 1000" class="arrow" style="stroke:#8b5cf6" marker-end="url(#arrow)"/>
+<text x="382" y="1088" class="arrow-label" text-anchor="start"><tspan x="382" dy="0">Auth/Profile API, api_tokens,</tspan><tspan x="382" dy="18">users</tspan></text>
+<path d="M 935 1070 L 935 1000" class="arrow" style="stroke:#8b5cf6" marker-end="url(#arrow)"/>
+<text x="947" y="1088" class="arrow-label" text-anchor="start"><tspan x="947" dy="0">Ticket API, storage,</tspan><tspan x="947" dy="18">tickets/photos</tspan></text>
+<path d="M 1495 1070 L 1495 1000" class="arrow" style="stroke:#8b5cf6" marker-end="url(#arrow)"/>
+<text x="1507" y="1088" class="arrow-label" text-anchor="start"><tspan x="1507" dy="0">Admin panel, workers,</tspan><tspan x="1507" dy="18">claim_requests</tspan></text>
+<path d="M 1495 1420 L 1495 1350" class="arrow" style="stroke:#8b5cf6" marker-end="url(#arrow)"/>
+<text x="1507" y="1438" class="arrow-label" text-anchor="start"><tspan x="1507" dy="0">Workers/residents/admins,</tspan><tspan x="1507" dy="18">PointsService</tspan></text>
+<path d="M 2055 1420 L 2055 1350" class="arrow" style="stroke:#8b5cf6" marker-end="url(#arrow)"/>
+<text x="2067" y="1438" class="arrow-label" text-anchor="start"><tspan x="2067" dy="0">Admin complaints/users/tickets</tspan></text>
+<path d="M 990 1780 L 990 1710" class="arrow" style="stroke:#8b5cf6" marker-end="url(#arrow)"/>
+<text x="1002" y="1798" class="arrow-label" text-anchor="start"><tspan x="1002" dy="0">Analytics, News, Rewards,</tspan><tspan x="1002" dy="18">Points controllers</tspan></text>
+<path d="M 580 835 L 730 835" class="arrow" style="stroke:#64748b" marker-end="url(#arrow)"/>
+<text x="595" y="818" class="arrow-label" text-anchor="start"><tspan x="595" dy="0">Профиль, роль, токен</tspan></text>
+<path d="M 1140 835 L 1290 835" class="arrow" style="stroke:#0891b2" marker-end="url(#arrow)"/>
+<text x="1155" y="818" class="arrow-label" text-anchor="start"><tspan x="1155" dy="0">Созданная заявка</tspan></text>
+<path d="M 1495 950 L 1495 1040 L 1495 1040 L 1495 1110" class="arrow" style="stroke:#0891b2" marker-end="url(#arrow)"/>
+<text x="1510" y="1030" class="arrow-label" text-anchor="start"><tspan x="1510" dy="0">Назначенная/принятая заявка</tspan></text>
+<path d="M 1700 1195 L 1850 1195" class="arrow" style="stroke:#dc2626" marker-end="url(#arrow)"/>
+<text x="1715" y="1178" class="arrow-label" text-anchor="start"><tspan x="1715" dy="0">Споры, скрытия, нарушения</tspan></text>
+<path d="M 1495 1300 L 1495 1410 L 1250 1410 L 1250 1530" class="arrow" style="stroke:#22a06b" marker-end="url(#arrow)"/>
+<text x="1310" y="1392" class="arrow-label" text-anchor="start"><tspan x="1310" dy="0">История, закрытия, баллы</tspan></text>
+<path d="M 2055 1300 L 2055 1680 L 1250 1680 L 1250 1580" class="arrow" style="stroke:#22a06b" marker-end="url(#arrow)"/>
+<text x="1845" y="1660" class="arrow-label" text-anchor="start"><tspan x="1845" dy="0">Решения по жалобам и блокировкам</tspan></text>
+<path d="M 1700 835 L 2460 835" class="arrow" style="stroke:#22a06b" marker-end="url(#arrow)"/>
+<text x="2060" y="818" class="arrow-label" text-anchor="start"><tspan x="2060" dy="0">Назначения, одобрения/отказы заявок на</tspan><tspan x="2060" dy="18">взятие</tspan></text>
+<path d="M 1700 1260 L 1780 1260 L 1780 1345 L 2460 1345" class="arrow" style="stroke:#22a06b" marker-end="url(#arrow)"/>
+<text x="1800" y="1328" class="arrow-label" text-anchor="start"><tspan x="1800" dy="0">Закрытые заявки, история статусов,</tspan><tspan x="1800" dy="18">начисленные баллы</tspan></text>
+<path d="M 2260 1195 L 2460 1195" class="arrow" style="stroke:#22a06b" marker-end="url(#arrow)"/>
+<text x="2280" y="1176" class="arrow-label" text-anchor="start"><tspan x="2280" dy="0">Решенные жалобы, баны,</tspan><tspan x="2280" dy="18">блокировки</tspan></text>
+<path d="M 1250 1555 L 2460 1555" class="arrow" style="stroke:#22a06b" marker-end="url(#arrow)"/>
+<text x="1270" y="1538" class="arrow-label" text-anchor="start"><tspan x="1270" dy="0">Лента новостей, каталог наград,</tspan><tspan x="1270" dy="18">аналитика/PDF/export</tspan></text>
+  <g class="note"><rect x="1870" y="150" width="420" height="340" rx="4" fill="#fff"/><rect x="1870" y="150" width="420" height="28" rx="4" fill="#0d6efd"/><path d="M 1870 174 L 2290 174 L 2290 178 L 1870 178 Z" fill="#0d6efd"/><text x="1882" y="169" class="note-title">ICOM A-0</text><text x="1888" y="204" class="note-text"><tspan class="dot" fill="#0d6efd">•</tspan> I: обращения, фото, геоданные, заявки на взятие</text><text x="1888" y="225" class="note-text"><tspan class="dot" fill="#0d6efd">•</tspan> C: роли, справочники, правила статусов, настройки баллов</text><text x="1888" y="246" class="note-text"><tspan class="dot" fill="#0d6efd">•</tspan> O: заявки, назначения, отчеты, новости, награды, баллы</text><text x="1888" y="267" class="note-text"><tspan class="dot" fill="#0d6efd">•</tspan> M: Laravel, API, админ-панель, БД, storage, пользователи</text><rect x="1870" y="150" width="420" height="340" rx="4" class="box-border"/></g>
+  <g class="note"><rect x="2320" y="150" width="410" height="340" rx="4" fill="#fff"/><rect x="2320" y="150" width="410" height="28" rx="4" fill="#22a06b"/><path d="M 2320 174 L 2730 174 L 2730 178 L 2320 178 Z" fill="#22a06b"/><text x="2332" y="169" class="note-title">Сущности проекта</text><text x="2338" y="204" class="note-text"><tspan class="dot" fill="#22a06b">•</tspan> users, api_tokens, worker_registration_codes</text><text x="2338" y="225" class="note-text"><tspan class="dot" fill="#22a06b">•</tspan> tickets, ticket_photos, ticket_status_histories</text><text x="2338" y="246" class="note-text"><tspan class="dot" fill="#22a06b">•</tspan> organizations, cities, claim_requests, hides</text><text x="2338" y="267" class="note-text"><tspan class="dot" fill="#22a06b">•</tspan> complaints, news, rewards, points_transactions</text><rect x="2320" y="150" width="410" height="340" rx="4" class="box-border"/></g>
+</svg>

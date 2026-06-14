@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\Concerns\AdminAccess;
 use App\Http\Controllers\Controller;
-use App\Models\Organization;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -25,7 +24,7 @@ class AdminUserController extends Controller
     {
         $admin = $this->requireSuperAdmin();
 
-        $query = User::with('organization')->withCount(['tickets', 'assignedTickets']);
+        $query = User::query();
 
         if ($request->filled('search')) {
             $search = trim((string) $request->search);
@@ -37,10 +36,6 @@ class AdminUserController extends Controller
 
         if ($request->filled('role')) {
             $query->where('role', $request->role);
-        }
-
-        if ($request->filled('organization_id')) {
-            $query->where('organization_id', $request->organization_id);
         }
 
         if ($request->filled('state')) {
@@ -58,7 +53,6 @@ class AdminUserController extends Controller
             ->paginate(20)
             ->withQueryString();
 
-        $organizations = Organization::where('active', true)->orderBy('id')->get();
         $roleLabels = $this->roleLabels;
 
         $summary = [
@@ -70,7 +64,7 @@ class AdminUserController extends Controller
             'banned' => User::whereNotNull('banned_at')->count(),
         ];
 
-        return view('admin.users.index', compact('users', 'organizations', 'roleLabels', 'summary', 'admin'));
+        return view('admin.users.index', compact('users', 'roleLabels', 'summary', 'admin'));
     }
 
     public function ban(Request $request, User $user)

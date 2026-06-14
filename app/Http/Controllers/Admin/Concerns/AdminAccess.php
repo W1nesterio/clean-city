@@ -78,19 +78,9 @@ trait AdminAccess
         return $user;
     }
 
-    /**
-     * Allow both super_admin and org_admin to access operational sections.
-     * org_admin must have organization_id set; super_admin sees everything.
-     */
     protected function requireOperationalAdmin(): User
     {
-        $user = $this->requireAdmin();
-
-        if ($this->isOrgAdmin($user) && !$user->organization_id) {
-            abort(403, 'У администратора ЖКХ не указана организация');
-        }
-
-        return $user;
+        return $this->requireOrgAdmin();
     }
 
     protected function scopeTicketsForAdmin(Builder $query, ?User $user = null, bool $includeHiddenForOrgAdmin = false): Builder

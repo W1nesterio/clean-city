@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_bottom_rounded"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:paddingStart="22dp"
+        android:paddingTop="48dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mapBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="#26FFFFFF"
+            android:minWidth="0dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="16dp"
+            android:text="← Назад"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:cornerRadius="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Карта обращений"
+            android:textColor="@color/white"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/workerMapSummaryTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Загрузка карты..."
+            android:textColor="#E6FFF0"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/workerMapProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/workerMapWebView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@drawable/bg_bottom_nav"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView android:id="@+id/navHomeTextView" style="@style/BottomNavItem" android:text="Главная" />
+        <TextView android:id="@+id/navTasksTextView" style="@style/BottomNavItem" android:text="Задачи" />
+        <TextView android:id="@+id/navRouteTextView" style="@style/BottomNavItem" android:text="Маршрут" />
+        <TextView android:id="@+id/navMapTextView" style="@style/BottomNavItem" android:text="Карта" />
+        <TextView android:id="@+id/navProfileTextView" style="@style/BottomNavItem" android:text="Профиль" android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

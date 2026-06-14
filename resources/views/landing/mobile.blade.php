@@ -65,8 +65,6 @@
         .button:hover { transform: translateY(-2px); }
         .button-primary { background: var(--green); color: white; box-shadow: 0 18px 42px rgba(11, 101, 53, .28); }
         .button-soft { background: #fff; color: var(--green); border: 1px solid rgba(11, 101, 53, .14); }
-        .button-disabled { background: #0e1d17; color: white; opacity: .92; cursor: default; }
-        .button-disabled:hover { transform: none; }
         .hero { padding: 84px 0 70px; position: relative; }
         .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 54px; align-items: center; }
         .eyebrow {
@@ -170,12 +168,6 @@
         .download-card { text-align: center; border-radius: 52px; padding: 78px 34px; background: linear-gradient(180deg, #fff, #eef7f2); border: 1px solid var(--line); box-shadow: var(--shadow); }
         .download-card h2 { margin: 0; font-size: clamp(42px, 7vw, 84px); letter-spacing: -.085em; line-height: .96; color: var(--dark); }
         .download-card p { margin: 20px auto 30px; max-width: 640px; color: var(--muted); font-size: 20px; line-height: 1.55; font-weight: 650; }
-        .toast {
-            position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%) translateY(20px);
-            background: #08130e; color: white; padding: 15px 20px; border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,.24);
-            opacity: 0; pointer-events: none; transition: .25s ease; z-index: 100; font-weight: 800;
-        }
-        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
         footer { padding: 34px 0; color: #66736c; font-weight: 700; border-top: 1px solid var(--line); }
         .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
         @media (max-width: 980px) {
@@ -229,7 +221,7 @@
                     <h1>Чистый город<br>в одном касании</h1>
                     <p class="hero-text">Жители сообщают о проблемах с фото и точкой на карте, службы ЖКХ получают задачи, маршруты и подтверждают выполненную работу.</p>
                     <div class="hero-actions">
-                        <button class="button button-primary" type="button" data-download>Скачать</button>
+                        <a class="button button-primary" href="{{ asset('downloads/CleanCity.apk') }}" download="CleanCity.apk">Скачать</a>
                         <a class="button button-soft" href="#screens">Посмотреть интерфейс</a>
                     </div>
                     <div class="stats-row">
@@ -312,8 +304,8 @@
         <section class="download" id="download">
             <div class="shell download-card">
                 <h2>Скачать приложение</h2>
-                <p>Кнопка уже подготовлена для APK. Когда сборка будет готова, сюда подключим файл приложения.</p>
-                <button class="button button-disabled" type="button" data-download>Скачать</button>
+                <p>Приложение для Android</p>
+                <a class="button button-primary" href="{{ asset('downloads/CleanCity.apk') }}" download="CleanCity.apk">Скачать</a>
             </div>
         </section>
     </main>
@@ -325,16 +317,5 @@
         </div>
     </footer>
 
-    <div class="toast" id="toast">Скачивание скоро будет доступно</div>
-    <script>
-        const toast = document.getElementById('toast');
-        document.querySelectorAll('[data-download]').forEach((button) => {
-            button.addEventListener('click', () => {
-                toast.classList.add('show');
-                window.clearTimeout(window.__downloadToastTimer);
-                window.__downloadToastTimer = window.setTimeout(() => toast.classList.remove('show'), 2400);
-            });
-        });
-    </script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    android:orientation="vertical">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/residentViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/residentBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@drawable/bg_bottom_nav"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/rnHome"
+            style="@style/BottomNavItem"
+            android:text="Главная" />
+
+        <TextView
+            android:id="@+id/rnCreate"
+            style="@style/BottomNavItem"
+            android:text="Заявка" />
+
+        <TextView
+            android:id="@+id/rnHistory"
+            style="@style/BottomNavItem"
+            android:text="История" />
+
+        <TextView
+            android:id="@+id/rnTasks"
+            style="@style/BottomNavItem"
+            android:text="Помочь" />
+
+        <TextView
+            android:id="@+id/rnSettings"
+            style="@style/BottomNavItem"
+            android:text="Настройки" />
+
+    </LinearLayout>
+</LinearLayout>

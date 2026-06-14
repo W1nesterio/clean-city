@@ -586,18 +586,10 @@
             @if($isSuperAdminLayout)
             <nav class="nav-pills">
                 <a class="nav-pill {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">Контроль</a>
-                <a class="nav-pill {{ request()->routeIs('admin.tickets.index') || request()->routeIs('admin.tickets.show') ? 'active' : '' }}" href="{{ route('admin.tickets.index') }}">Заявки</a>
-                <a class="nav-pill {{ request()->routeIs('admin.tickets.map') ? 'active' : '' }}" href="{{ route('admin.tickets.map') }}">Карта</a>
-                <a class="nav-pill {{ request()->routeIs('admin.analytics.*') ? 'active' : '' }}" href="{{ route('admin.analytics.index') }}">Аналитика</a>
                 <a class="nav-pill {{ request()->routeIs('admin.users.*') ? 'active' : '' }}" href="{{ route('admin.users.index') }}">Пользователи</a>
-                <a class="nav-pill {{ request()->routeIs('admin.employees.*') ? 'active' : '' }}" href="{{ route('admin.employees.index') }}">Сотрудники</a>
-                <a class="nav-pill {{ request()->routeIs('admin.organizations.*') ? 'active' : '' }}" href="{{ route('admin.organizations.index') }}">ЖКХ</a>
-                <a class="nav-pill {{ request()->routeIs('admin.claim-requests.*') ? 'active' : '' }}" href="{{ route('admin.claim-requests.index') }}">Запросы</a>
-                <a class="nav-pill {{ request()->routeIs('admin.complaints.*') ? 'active' : '' }}" href="{{ route('admin.complaints.index') }}">Жалобы</a>
                 <a class="nav-pill {{ request()->routeIs('admin.news.*') ? 'active' : '' }}" href="{{ route('admin.news.index') }}">Новости</a>
                 <a class="nav-pill {{ request()->routeIs('admin.rewards.*') ? 'active' : '' }}" href="{{ route('admin.rewards.index') }}">Купоны</a>
                 <a class="nav-pill {{ request()->routeIs('admin.points.*') ? 'active' : '' }}" href="{{ route('admin.points.index') }}">Баллы</a>
-                <a class="nav-pill {{ request()->routeIs('admin.cities.*') ? 'active' : '' }}" href="{{ route('admin.cities.index') }}">Города</a>
             </nav>
             @elseif($isOrgAdminLayout)
             <nav class="nav-pills">
@@ -664,18 +656,10 @@
     <div class="drawer-nav">
         @if($isSuperAdminLayout)
             <a class="drawer-nav-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">Контроль</a>
-            <a class="drawer-nav-item {{ request()->routeIs('admin.tickets.*') ? 'active' : '' }}" href="{{ route('admin.tickets.index') }}">Заявки</a>
-            <a class="drawer-nav-item {{ request()->routeIs('admin.tickets.map') ? 'active' : '' }}" href="{{ route('admin.tickets.map') }}">Карта</a>
-            <a class="drawer-nav-item {{ request()->routeIs('admin.analytics.*') ? 'active' : '' }}" href="{{ route('admin.analytics.index') }}">Аналитика</a>
             <a class="drawer-nav-item {{ request()->routeIs('admin.users.*') ? 'active' : '' }}" href="{{ route('admin.users.index') }}">Пользователи</a>
-            <a class="drawer-nav-item {{ request()->routeIs('admin.employees.*') ? 'active' : '' }}" href="{{ route('admin.employees.index') }}">Сотрудники</a>
-            <a class="drawer-nav-item {{ request()->routeIs('admin.organizations.*') ? 'active' : '' }}" href="{{ route('admin.organizations.index') }}">ЖКХ</a>
-            <a class="drawer-nav-item {{ request()->routeIs('admin.claim-requests.*') ? 'active' : '' }}" href="{{ route('admin.claim-requests.index') }}">Запросы</a>
-            <a class="drawer-nav-item {{ request()->routeIs('admin.complaints.*') ? 'active' : '' }}" href="{{ route('admin.complaints.index') }}">Жалобы</a>
             <a class="drawer-nav-item {{ request()->routeIs('admin.news.*') ? 'active' : '' }}" href="{{ route('admin.news.index') }}">Новости</a>
             <a class="drawer-nav-item {{ request()->routeIs('admin.rewards.*') ? 'active' : '' }}" href="{{ route('admin.rewards.index') }}">Купоны</a>
             <a class="drawer-nav-item {{ request()->routeIs('admin.points.*') ? 'active' : '' }}" href="{{ route('admin.points.index') }}">Баллы</a>
-            <a class="drawer-nav-item {{ request()->routeIs('admin.cities.*') ? 'active' : '' }}" href="{{ route('admin.cities.index') }}">Города</a>
         @elseif($isOrgAdminLayout)
             <a class="drawer-nav-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">Обзор</a>
             <a class="drawer-nav-item {{ request()->routeIs('admin.tickets.index') || request()->routeIs('admin.tickets.show') ? 'active' : '' }}" href="{{ route('admin.tickets.index') }}">Заявки</a>

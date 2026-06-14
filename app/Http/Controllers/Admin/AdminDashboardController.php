@@ -4,11 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\Concerns\AdminAccess;
 use App\Http\Controllers\Controller;
-use App\Models\Organization;
+use App\Models\News;
+use App\Models\PointsTransaction;
+use App\Models\Reward;
 use App\Models\Ticket;
 use App\Models\TicketHide;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
 class AdminDashboardController extends Controller
 {
@@ -25,14 +26,10 @@ class AdminDashboardController extends Controller
                 'residents' => User::where('role', 'resident')->count(),
                 'org_admins' => User::where('role', 'org_admin')->count(),
                 'workers' => User::where('role', 'worker')->count(),
-                'organizations' => Organization::where('active', true)->count(),
+                'news' => News::where('active', true)->count(),
+                'rewards' => Reward::where('active', true)->count(),
+                'points_transactions' => PointsTransaction::count(),
             ];
-
-            $organizations = Organization::withCount([
-                'admins',
-                'workers',
-                'tickets' => fn ($q) => $q->whereNull('deleted_at'),
-            ])->where('active', true)->orderBy('id')->get();
 
             $bannedUsers = User::whereNotNull('banned_at')
                 ->latest('banned_at')
@@ -41,7 +38,7 @@ class AdminDashboardController extends Controller
 
             $recentUsers = User::latest()->limit(8)->get();
 
-            return view('admin.dashboard', compact('admin', 'summary', 'organizations', 'bannedUsers', 'recentUsers'));
+            return view('admin.dashboard', compact('admin', 'summary', 'bannedUsers', 'recentUsers'));
         }
 
         $orgId = $admin->organization_id;

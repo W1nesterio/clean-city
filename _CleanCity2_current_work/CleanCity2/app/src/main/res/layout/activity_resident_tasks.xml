@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    android:orientation="vertical">
+
+    <!-- Green gradient header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_bottom_rounded"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/residentTasksBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingEnd="16dp"
+            android:text="← Назад"
+            android:textColor="#DFFFEA"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Задания жителя"
+            android:textColor="@color/white"
+            android:textSize="31sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="2dp"
+            android:text="Выполняйте задания и получайте баллы"
+            android:textColor="#E6FFF0"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <!-- Tabs bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tabAvailable"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="Доступные"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:layout_marginEnd="6dp"
+            app:cornerRadius="14dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tabMine"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="Мои задания"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:layout_marginStart="6dp"
+            app:cornerRadius="14dp" />
+
+    </LinearLayout>
+
+    <!-- Loading indicator -->
+    <ProgressBar
+        android:id="@+id/residentTasksProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/green_main"
+        android:visibility="gone" />
+
+    <!-- Tasks list -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/residentTasksContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="32dp" />
+
+    </ScrollView>
+
+    <!-- Bottom nav (same IDs as other activities) -->
+    <LinearLayout
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@drawable/bg_bottom_nav"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/navHomeTextView"
+            style="@style/BottomNavItem"
+            android:text="Главная" />
+
+        <TextView
+            android:id="@+id/navTasksTextView"
+            style="@style/BottomNavItem"
+            android:text="Заявка" />
+
+        <TextView
+            android:id="@+id/navMapTextView"
+            style="@style/BottomNavItem"
+            android:text="Задачи" />
+
+        <TextView
+            android:id="@+id/navRouteTextView"
+            style="@style/BottomNavItem"
+            android:text="История" />
+
+        <TextView
+            android:id="@+id/navProfileTextView"
+            style="@style/BottomNavItem"
+            android:text="Настройки" />
+
+    </LinearLayout>
+
+</LinearLayout>

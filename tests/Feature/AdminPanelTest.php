@@ -3,7 +3,9 @@
 namespace Tests\Feature;
 
 use App\Models\Category;
+use App\Models\News;
 use App\Models\Organization;
+use App\Models\Reward;
 use App\Models\Ticket;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -110,6 +112,98 @@ class AdminPanelTest extends TestCase
 
         $response->assertOk();
         $response->assertSeeText('Рабочий обзор');
+    }
+
+    public function test_super_admin_dashboard_is_platform_only(): void
+    {
+        $admin = $this->makeUser('admin');
+
+        $response = $this->actingAs($admin)->get(route('admin.dashboard'));
+
+        $response->assertOk();
+        $response->assertSeeText('Панель главного администратора');
+        $response->assertSeeText('Платформенные разделы');
+        $response->assertDontSeeText('Открыть заявки');
+        $response->assertDontSeeText('Фиксированные ЖКХ');
+    }
+
+    public function test_super_admin_cannot_open_operational_jkh_sections(): void
+    {
+        $admin = $this->makeUser('admin');
+        $organization = $this->makeOrganization();
+        $ticket = $this->makeTicket($organization);
+
+        $routes = [
+            route('admin.tickets.index'),
+            route('admin.tickets.map'),
+            route('admin.tickets.show', $ticket),
+            route('admin.analytics.index'),
+            route('admin.employees.index'),
+            route('admin.organizations.index'),
+            route('admin.claim-requests.index'),
+            route('admin.complaints.index'),
+            route('admin.worker-codes.index'),
+        ];
+
+        foreach ($routes as $url) {
+            $this->actingAs($admin)->get($url)->assertForbidden();
+        }
+
+        $this->actingAs($admin)
+            ->post(route('admin.tickets.delete', $ticket), ['delete_reason' => 'spam'])
+            ->assertForbidden();
+    }
+
+    public function test_super_admin_only_sees_platform_news_and_rewards(): void
+    {
+        $organization = $this->makeOrganization();
+        $admin = $this->makeUser('admin');
+
+        News::create([
+            'title' => 'Общая новость',
+            'body' => 'Платформенная публикация',
+            'published_date' => now()->toDateString(),
+            'active' => true,
+            'created_by_user_id' => $admin->id,
+            'organization_id' => null,
+        ]);
+
+        News::create([
+            'title' => 'Новость ЖКХ',
+            'body' => 'Публикация организации',
+            'published_date' => now()->toDateString(),
+            'active' => true,
+            'created_by_user_id' => $admin->id,
+            'organization_id' => $organization->id,
+        ]);
+
+        Reward::create([
+            'title' => 'Общий купон',
+            'description' => 'Платформенное вознаграждение',
+            'points_required' => 10,
+            'active' => true,
+            'created_by_user_id' => $admin->id,
+            'organization_id' => null,
+        ]);
+
+        Reward::create([
+            'title' => 'Купон ЖКХ',
+            'description' => 'Вознаграждение организации',
+            'points_required' => 10,
+            'active' => true,
+            'created_by_user_id' => $admin->id,
+            'organization_id' => $organization->id,
+        ]);
+
+        $this->actingAs($admin)->get(route('admin.news.index'))
+            ->assertOk()
+            ->assertSeeText('Общая новость')
+            ->assertDontSeeText('Новость ЖКХ');
+
+        $this->actingAs($admin)->get(route('admin.rewards.index'))
+            ->assertOk()
+            ->assertSeeText('Общий купон')
+            ->assertDontSeeText('Купон ЖКХ');
     }
 
     public function test_org_admin_can_open_ticket_from_own_organization(): void

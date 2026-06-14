@@ -1,0 +1,19 @@
+Распакуй архив поверх рабочих папок так, чтобы пути совпали:
+
+D:\xamp\htdocs\clean-city-app\routes\web.php
+D:\xamp\htdocs\clean-city-app\app\Http\Controllers\Admin\AdminEmployeeController.php
+...
+
+И мобильные файлы:
+CleanCity2\app\src\main\java\com\example\cleancity\RegisterActivity.java
+...
+
+После замены backend:
+cd D:\xamp\htdocs\clean-city-app
+D:\xamp\php\php.exe artisan optimize:clear
+D:\xamp\php\php.exe artisan migrate
+D:\xamp\php\php.exe artisan route:list | findstr employees
+D:\xamp\php\php.exe artisan route:list | findstr register-worker
+
+Открыть:
+http://127.0.0.1:8000/admin/employees

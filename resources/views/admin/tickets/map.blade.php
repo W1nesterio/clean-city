@@ -158,7 +158,7 @@
 
     const bounds = [];
     tickets.forEach(t => {
-        if (!t.lat || !t.lng) return;
+        if (t.lat === null || t.lng === null) return;
         bounds.push([t.lat, t.lng]);
         const routeUrl = `https://www.google.com/maps/dir/?api=1&destination=${t.lat},${t.lng}`;
         const popup = `<div style="font-weight:600;margin-bottom:4px;">№${t.id} · ${esc(t.category)}</div>`+

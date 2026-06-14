@@ -316,7 +316,7 @@ class AdminTicketController extends Controller
 
     public function bulkDelete(Request $request)
     {
-        $admin = $this->requireSuperAdmin();
+        $admin = $this->requireOrgAdmin();
 
         $data = $request->validate([
             'ticket_ids' => ['required', 'array'],
@@ -325,11 +325,12 @@ class AdminTicketController extends Controller
         ]);
 
         $count = Ticket::whereIn('id', $data['ticket_ids'])
+            ->where('assigned_org_id', $admin->organization_id)
             ->whereNull('deleted_at')
             ->update([
                 'deleted_at' => now(),
                 'deleted_by_user_id' => $admin->id,
-                'delete_reason' => $data['delete_reason'] ?: 'Массовое удаление главным администратором',
+                'delete_reason' => $data['delete_reason'] ?: 'Массовое удаление администратором ЖКХ',
             ]);
 
         return redirect()->route('admin.tickets.index')->with('success', "Заявок убрано: {$count}");
@@ -337,7 +338,8 @@ class AdminTicketController extends Controller
 
     public function softDelete(Request $request, Ticket $ticket)
     {
-        $admin = $this->requireSuperAdmin();
+        $admin = $this->requireOrgAdmin();
+        $this->ensureTicketVisibleToAdmin($ticket, $admin);
 
         $data = $request->validate([
             'delete_reason' => ['nullable', 'string', 'max:255'],
@@ -346,7 +348,7 @@ class AdminTicketController extends Controller
         $ticket->update([
             'deleted_at' => now(),
             'deleted_by_user_id' => $admin->id,
-            'delete_reason' => $data['delete_reason'] ?: 'Удалено главным администратором',
+            'delete_reason' => $data['delete_reason'] ?: 'Удалено администратором ЖКХ',
         ]);
 
         return redirect()->route('admin.tickets.index')->with('success', 'Заявка убрана из системы');

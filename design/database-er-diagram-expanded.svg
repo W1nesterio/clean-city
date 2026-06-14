@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="3260" height="1940" viewBox="0 0 3260 1940" role="img" aria-labelledby="title desc">
+  <title id="title">Clean City database ER diagram</title>
+  <desc id="desc">Expanded ER diagram with larger canvas, triangular layout, and separate orthogonal lines.</desc>
+  <defs><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.16"/></filter><marker id="arrow-0" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-3" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-4" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-5" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-6" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-7" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-8" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-9" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-10" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-11" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-12" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-13" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-14" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-15" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-16" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-17" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-18" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-19" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-20" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-21" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#8b5cf6"/></marker>
+<marker id="arrow-22" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#0891b2"/></marker>
+<marker id="arrow-23" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#0891b2"/></marker>
+<marker id="arrow-24" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#0891b2"/></marker>
+<marker id="arrow-25" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#0891b2"/></marker>
+<marker id="arrow-26" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#0891b2"/></marker>
+<marker id="arrow-27" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#0891b2"/></marker>
+<marker id="arrow-28" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#22a06b"/></marker>
+<marker id="arrow-29" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#22a06b"/></marker>
+<marker id="arrow-30" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#22a06b"/></marker>
+<marker id="arrow-31" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#22a06b"/></marker>
+<marker id="arrow-32" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#22a06b"/></marker>
+<marker id="arrow-33" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#22a06b"/></marker>
+<marker id="arrow-34" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#22a06b"/></marker>
+<marker id="arrow-35" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#22a06b"/></marker>
+<marker id="arrow-36" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#22a06b"/></marker>
+<marker id="arrow-37" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#f97316"/></marker>
+<marker id="arrow-38" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#d97706"/></marker>
+<marker id="arrow-39" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#db2777"/></marker></defs>
+  <style>
+    svg { background: #f6f8fb; }
+    .canvas-title { font-family: Segoe UI, Arial, sans-serif; font-size: 24px; font-weight: 700; fill: #0f172a; }
+    .canvas-note { font-family: Segoe UI, Arial, sans-serif; font-size: 13px; fill: #64748b; }
+    .table-bg { fill: #ffffff; filter: url(#shadow); }
+    .table-border { fill: none; stroke: #bfccd9; stroke-width: 1.2; }
+    .table-title { font-family: Segoe UI, Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #ffffff; }
+    .row.even { fill: #ffffff; }
+    .row.odd { fill: #f8fafc; }
+    .row-line { stroke: #e2e8f0; stroke-width: 0.8; }
+    .field-text { font-family: Consolas, 'Cascadia Mono', monospace; font-size: 12.5px; fill: #1f2937; }
+    .pk-text { font-weight: 700; fill: #111827; }
+    .fk-text { fill: #0f172a; }
+    .badge.pk { fill: #fbbf24; stroke: #d97706; stroke-width: 0.7; }
+    .badge.fk { fill: #dbeafe; stroke: #2563eb; stroke-width: 0.7; }
+    .badge-text { font-family: Segoe UI, Arial, sans-serif; font-size: 10.5px; font-weight: 700; fill: #0f172a; text-anchor: middle; }
+    .rel-line { fill: none; stroke-width: 1.75; stroke-linecap: square; stroke-linejoin: miter; opacity: 0.8; }
+    .legend { font-family: Segoe UI, Arial, sans-serif; font-size: 12px; fill: #334155; }
+    .legend-title { font-weight: 700; fill: #0f172a; }
+  </style>
+  <rect x="0" y="0" width="3260" height="1940" fill="#f6f8fb"/>
+  <text x="36" y="40" class="canvas-title">Clean City DB ER diagram</text>
+  <text x="36" y="64" class="canvas-note">Холст расширен, таблицы разнесены по FK-кластерам; линии идут отдельными ортогональными маршрутами без общих пучков у PK.</text>
+  <g class="relations">
+    <path id="rel-0-users-banned_by_user_id-users" d="M 380.0 779.0 L 330.0 779.0 L 330.0 559.0 L 356.0 559.0 L 438.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-0)"/>
+    <circle cx="380" cy="779" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>users.banned_by_user_id -&gt; users.id</title>
+
+    <path id="rel-1-api_tokens-user_id-users" d="M 380.0 911.0 L 350.0 911.0 L 350.0 900.0 L 344.0 900.0 L 344.0 559.0 L 453.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-1)"/>
+    <circle cx="380" cy="911" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>api_tokens.user_id -&gt; users.id</title>
+
+    <path id="rel-2-points_transactions-user_id-users" d="M 420.0 1221.0 L 330.0 1221.0 L 330.0 1390.0 L 332.0 1390.0 L 332.0 559.0 L 469.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-2)"/>
+    <circle cx="420" cy="1221" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>points_transactions.user_id -&gt; users.id</title>
+
+    <path id="rel-3-points_transactions-admin_id-users" d="M 420.0 1309.0 L 350.0 1309.0 L 350.0 1420.0 L 320.0 1420.0 L 320.0 559.0 L 484.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-3)"/>
+    <circle cx="420" cy="1309" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>points_transactions.admin_id -&gt; users.id</title>
+
+    <path id="rel-4-ticket_status_histories-changed_by_user_id-users" d="M 850.0 1097.0 L 780.0 1097.0 L 780.0 1110.0 L 500.0 1110.0 L 500.0 902.0 L 500.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-4)"/>
+    <circle cx="850" cy="1097" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_status_histories.changed_by_user_id -&gt; users.id</title>
+
+    <path id="rel-5-ticket_files-uploaded_by_user_id-users" d="M 850.0 1397.0 L 800.0 1397.0 L 800.0 1460.0 L 515.0 1460.0 L 515.0 914.0 L 515.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-5)"/>
+    <circle cx="850" cy="1397" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_files.uploaded_by_user_id -&gt; users.id</title>
+
+    <path id="rel-6-tickets-user_id-users" d="M 1360.0 881.0 L 1260.0 881.0 L 1260.0 760.0 L 868.0 760.0 L 868.0 559.0 L 531.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-6)"/>
+    <circle cx="1360" cy="881" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>tickets.user_id -&gt; users.id</title>
+
+    <path id="rel-7-tickets-assigned_worker_id-users" d="M 1360.0 947.0 L 1285.0 947.0 L 1285.0 790.0 L 880.0 790.0 L 880.0 559.0 L 546.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-7)"/>
+    <circle cx="1360" cy="947" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>tickets.assigned_worker_id -&gt; users.id</title>
+
+    <path id="rel-8-tickets-deleted_by_user_id-users" d="M 1360.0 1145.0 L 1310.0 1145.0 L 1310.0 1490.0 L 561.0 1490.0 L 561.0 902.0 L 561.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-8)"/>
+    <circle cx="1360" cy="1145" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>tickets.deleted_by_user_id -&gt; users.id</title>
+
+    <path id="rel-9-worker_registration_codes-created_by_user_id-users" d="M 1370.0 247.0 L 930.0 247.0 L 930.0 300.0 L 577.0 300.0 L 577.0 484.0 L 577.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-9)"/>
+    <circle cx="1370" cy="247" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>worker_registration_codes.created_by_user_id -&gt; users.id</title>
+
+    <path id="rel-10-worker_registration_codes-used_by_user_id-users" d="M 1370.0 269.0 L 950.0 269.0 L 950.0 328.0 L 592.0 328.0 L 592.0 472.0 L 592.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-10)"/>
+    <circle cx="1370" cy="269" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>worker_registration_codes.used_by_user_id -&gt; users.id</title>
+
+    <path id="rel-11-worker_registration_codes-revoked_by_user_id-users" d="M 1370.0 423.0 L 970.0 423.0 L 970.0 356.0 L 608.0 356.0 L 608.0 460.0 L 608.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-11)"/>
+    <circle cx="1370" cy="423" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>worker_registration_codes.revoked_by_user_id -&gt; users.id</title>
+
+    <path id="rel-12-organization_user_blocks-user_id-users" d="M 1840.0 273.0 L 990.0 273.0 L 990.0 384.0 L 623.0 384.0 L 623.0 496.0 L 623.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-12)"/>
+    <circle cx="1840" cy="273" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>organization_user_blocks.user_id -&gt; users.id</title>
+
+    <path id="rel-13-organization_user_blocks-created_by_user_id-users" d="M 1840.0 295.0 L 1010.0 295.0 L 1010.0 412.0 L 639.0 412.0 L 639.0 484.0 L 639.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-13)"/>
+    <circle cx="1840" cy="295" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>organization_user_blocks.created_by_user_id -&gt; users.id</title>
+
+    <path id="rel-14-ticket_claim_requests-worker_id-users" d="M 1880.0 823.0 L 1180.0 823.0 L 1180.0 1440.0 L 654.0 1440.0 L 654.0 926.0 L 654.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-14)"/>
+    <circle cx="1880" cy="823" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_claim_requests.worker_id -&gt; users.id</title>
+
+    <path id="rel-15-ticket_claim_requests-reviewed_by_user_id-users" d="M 1880.0 911.0 L 1205.0 911.0 L 1205.0 1470.0 L 669.0 1470.0 L 669.0 938.0 L 669.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-15)"/>
+    <circle cx="1880" cy="911" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_claim_requests.reviewed_by_user_id -&gt; users.id</title>
+
+    <path id="rel-16-ticket_hides-hidden_by_user_id-users" d="M 1880.0 1155.0 L 1230.0 1155.0 L 1230.0 1500.0 L 685.0 1500.0 L 685.0 902.0 L 685.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-16)"/>
+    <circle cx="1880" cy="1155" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_hides.hidden_by_user_id -&gt; users.id</title>
+
+    <path id="rel-17-organization_complaints-created_by_user_id-users" d="M 1880.0 1433.0 L 1255.0 1433.0 L 1255.0 1530.0 L 700.0 1530.0 L 700.0 914.0 L 700.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-17)"/>
+    <circle cx="1880" cy="1433" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>organization_complaints.created_by_user_id -&gt; users.id</title>
+
+    <path id="rel-18-organization_complaints-target_user_id-users" d="M 1880.0 1455.0 L 1280.0 1455.0 L 1280.0 1560.0 L 716.0 1560.0 L 716.0 926.0 L 716.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-18)"/>
+    <circle cx="1880" cy="1455" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>organization_complaints.target_user_id -&gt; users.id</title>
+
+    <path id="rel-19-organization_complaints-reviewed_by_user_id-users" d="M 1880.0 1587.0 L 1305.0 1587.0 L 1305.0 1590.0 L 731.0 1590.0 L 731.0 938.0 L 731.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-19)"/>
+    <circle cx="1880" cy="1587" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>organization_complaints.reviewed_by_user_id -&gt; users.id</title>
+
+    <path id="rel-20-news-created_by_user_id-users" d="M 380.0 1749.0 L 360.0 1749.0 L 360.0 1550.0 L 747.0 1550.0 L 747.0 902.0 L 747.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-20)"/>
+    <circle cx="380" cy="1749" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>news.created_by_user_id -&gt; users.id</title>
+
+    <path id="rel-21-rewards-created_by_user_id-users" d="M 2360.0 1777.0 L 1328.0 1777.0 L 1328.0 1875.0 L 762.0 1875.0 L 762.0 914.0 L 762.0 559.0" class="rel-line" style="stroke:#8b5cf6" marker-end="url(#arrow-21)"/>
+    <circle cx="2360" cy="1777" r="3.0" fill="#8b5cf6" stroke="#fff" stroke-width="1.3"/>
+    <title>rewards.created_by_user_id -&gt; users.id</title>
+
+    <path id="rel-22-ticket_photos-ticket_id-tickets" d="M 1180.0 741.0 L 1240.0 741.0 L 1240.0 750.0 L 1336.0 750.0 L 1336.0 859.0 L 1418.0 859.0" class="rel-line" style="stroke:#0891b2" marker-end="url(#arrow-22)"/>
+    <circle cx="1180" cy="741" r="3.0" fill="#0891b2" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_photos.ticket_id -&gt; tickets.id</title>
+
+    <path id="rel-23-ticket_status_histories-ticket_id-tickets" d="M 1220.0 1031.0 L 1255.0 1031.0 L 1255.0 1040.0 L 1324.0 1040.0 L 1324.0 859.0 L 1481.0 859.0" class="rel-line" style="stroke:#0891b2" marker-end="url(#arrow-23)"/>
+    <circle cx="1220" cy="1031" r="3.0" fill="#0891b2" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_status_histories.ticket_id -&gt; tickets.id</title>
+
+    <path id="rel-24-ticket_files-ticket_id-tickets" d="M 1220.0 1331.0 L 1270.0 1331.0 L 1270.0 1450.0 L 1544.0 1450.0 L 1544.0 1292.0 L 1544.0 859.0" class="rel-line" style="stroke:#0891b2" marker-end="url(#arrow-24)"/>
+    <circle cx="1220" cy="1331" r="3.0" fill="#0891b2" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_files.ticket_id -&gt; tickets.id</title>
+
+    <path id="rel-25-ticket_claim_requests-ticket_id-tickets" d="M 1880.0 801.0 L 1830.0 801.0 L 1830.0 830.0 L 1814.0 830.0 L 1814.0 859.0 L 1606.0 859.0" class="rel-line" style="stroke:#0891b2" marker-end="url(#arrow-25)"/>
+    <circle cx="1880" cy="801" r="3.0" fill="#0891b2" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_claim_requests.ticket_id -&gt; tickets.id</title>
+
+    <path id="rel-26-ticket_hides-ticket_id-tickets" d="M 1880.0 1111.0 L 1845.0 1111.0 L 1845.0 1080.0 L 1826.0 1080.0 L 1826.0 859.0 L 1669.0 859.0" class="rel-line" style="stroke:#0891b2" marker-end="url(#arrow-26)"/>
+    <circle cx="1880" cy="1111" r="3.0" fill="#0891b2" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_hides.ticket_id -&gt; tickets.id</title>
+
+    <path id="rel-27-organization_complaints-ticket_id-tickets" d="M 1880.0 1477.0 L 1860.0 1477.0 L 1860.0 1460.0 L 1732.0 1460.0 L 1732.0 1292.0 L 1732.0 859.0" class="rel-line" style="stroke:#0891b2" marker-end="url(#arrow-27)"/>
+    <circle cx="1880" cy="1477" r="3.0" fill="#0891b2" stroke="#fff" stroke-width="1.3"/>
+    <title>organization_complaints.ticket_id -&gt; tickets.id</title>
+
+    <path id="rel-28-users-organization_id-organizations" d="M 820.0 691.0 L 1260.0 691.0 L 1260.0 470.0 L 2336.0 470.0 L 2336.0 559.0 L 2418.0 559.0" class="rel-line" style="stroke:#22a06b" marker-end="url(#arrow-28)"/>
+    <circle cx="820" cy="691" r="3.0" fill="#22a06b" stroke="#fff" stroke-width="1.3"/>
+    <title>users.organization_id -&gt; organizations.id</title>
+
+    <path id="rel-29-tickets-assigned_org_id-organizations" d="M 1790.0 925.0 L 1960.0 925.0 L 1960.0 790.0 L 2324.0 790.0 L 2324.0 559.0 L 2459.0 559.0" class="rel-line" style="stroke:#22a06b" marker-end="url(#arrow-29)"/>
+    <circle cx="1790" cy="925" r="3.0" fill="#22a06b" stroke="#fff" stroke-width="1.3"/>
+    <title>tickets.assigned_org_id -&gt; organizations.id</title>
+
+    <path id="rel-30-worker_registration_codes-organization_id-organizations" d="M 1760.0 225.0 L 2130.0 225.0 L 2130.0 300.0 L 2499.0 300.0 L 2499.0 472.0 L 2499.0 559.0" class="rel-line" style="stroke:#22a06b" marker-end="url(#arrow-30)"/>
+    <circle cx="1760" cy="225" r="3.0" fill="#22a06b" stroke="#fff" stroke-width="1.3"/>
+    <title>worker_registration_codes.organization_id -&gt; organizations.id</title>
+
+    <path id="rel-31-organization_user_blocks-organization_id-organizations" d="M 2220.0 251.0 L 2290.0 251.0 L 2290.0 360.0 L 2540.0 360.0 L 2540.0 460.0 L 2540.0 559.0" class="rel-line" style="stroke:#22a06b" marker-end="url(#arrow-31)"/>
+    <circle cx="2220" cy="251" r="3.0" fill="#22a06b" stroke="#fff" stroke-width="1.3"/>
+    <title>organization_user_blocks.organization_id -&gt; organizations.id</title>
+
+    <path id="rel-32-ticket_claim_requests-organization_id-organizations" d="M 2270.0 845.0 L 2295.0 845.0 L 2295.0 1000.0 L 2580.0 1000.0 L 2580.0 814.0 L 2580.0 559.0" class="rel-line" style="stroke:#22a06b" marker-end="url(#arrow-32)"/>
+    <circle cx="2270" cy="845" r="3.0" fill="#22a06b" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_claim_requests.organization_id -&gt; organizations.id</title>
+
+    <path id="rel-33-ticket_hides-organization_id-organizations" d="M 2240.0 1133.0 L 2310.0 1133.0 L 2310.0 1230.0 L 2621.0 1230.0 L 2621.0 826.0 L 2621.0 559.0" class="rel-line" style="stroke:#22a06b" marker-end="url(#arrow-33)"/>
+    <circle cx="2240" cy="1133" r="3.0" fill="#22a06b" stroke="#fff" stroke-width="1.3"/>
+    <title>ticket_hides.organization_id -&gt; organizations.id</title>
+
+    <path id="rel-34-organization_complaints-organization_id-organizations" d="M 2290.0 1411.0 L 2325.0 1411.0 L 2325.0 1440.0 L 2661.0 1440.0 L 2661.0 838.0 L 2661.0 559.0" class="rel-line" style="stroke:#22a06b" marker-end="url(#arrow-34)"/>
+    <circle cx="2290" cy="1411" r="3.0" fill="#22a06b" stroke="#fff" stroke-width="1.3"/>
+    <title>organization_complaints.organization_id -&gt; organizations.id</title>
+
+    <path id="rel-35-news-organization_id-organizations" d="M 770.0 1771.0 L 2140.0 1771.0 L 2140.0 1848.0 L 2702.0 1848.0 L 2702.0 850.0 L 2702.0 559.0" class="rel-line" style="stroke:#22a06b" marker-end="url(#arrow-35)"/>
+    <circle cx="770" cy="1771" r="3.0" fill="#22a06b" stroke="#fff" stroke-width="1.3"/>
+    <title>news.organization_id -&gt; organizations.id</title>
+
+    <path id="rel-36-rewards-organization_id-organizations" d="M 2770.0 1799.0 L 2825.0 1799.0 L 2825.0 1810.0 L 2742.0 1810.0 L 2742.0 814.0 L 2742.0 559.0" class="rel-line" style="stroke:#22a06b" marker-end="url(#arrow-36)"/>
+    <circle cx="2770" cy="1799" r="3.0" fill="#22a06b" stroke="#fff" stroke-width="1.3"/>
+    <title>rewards.organization_id -&gt; organizations.id</title>
+
+    <path id="rel-37-organizations-city_id-cities" d="M 2800.0 603.0 L 2830.0 603.0 L 2830.0 559.0 L 2860.0 559.0" class="rel-line" style="stroke:#f97316" marker-end="url(#arrow-37)"/>
+    <circle cx="2800" cy="603" r="3.0" fill="#f97316" stroke="#fff" stroke-width="1.3"/>
+    <title>organizations.city_id -&gt; cities.id</title>
+
+    <path id="rel-38-tickets-category_id-categories" d="M 1360.0 903.0 L 1290.0 903.0 L 1290.0 559.0 L 1640.0 559.0" class="rel-line" style="stroke:#d97706" marker-end="url(#arrow-38)"/>
+    <circle cx="1360" cy="903" r="3.0" fill="#d97706" stroke="#fff" stroke-width="1.3"/>
+    <title>tickets.category_id -&gt; categories.id</title>
+
+    <path id="rel-39-news_photos-news_id-news" d="M 820.0 1661.0 L 795.0 1661.0 L 795.0 1639.0 L 770.0 1639.0" class="rel-line" style="stroke:#db2777" marker-end="url(#arrow-39)"/>
+    <circle cx="820" cy="1661" r="3.0" fill="#db2777" stroke="#fff" stroke-width="1.3"/>
+    <title>news_photos.news_id -&gt; news.id</title></g>
+  <g class="tables">
+  <g class="table" id="table-ticket_photos">
+    <rect x="850" y="680" width="330" height="160" rx="5" class="table-bg"/>
+    <rect x="850" y="680" width="330" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 850 703 L 1180 703 L 1180 708 L 850 708 Z" fill="#0d6efd"/>
+    <text x="861" y="698.5" class="table-title">ticket_photos</text>
+    
+      <rect x="850" y="708" width="330" height="22" class="row even"/>
+      <line x1="850" y1="708" x2="1180" y2="708" class="row-line"/>
+      <rect x="858" y="711.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="870" y="723" class="badge-text">PK</text>
+      <text x="890" y="723.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="850" y="730" width="330" height="22" class="row odd"/>
+      <line x1="850" y1="730" x2="1180" y2="730" class="row-line"/>
+      <rect x="858" y="733.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="870" y="745" class="badge-text">FK</text>
+      <text x="890" y="745.4" class="field-text  fk-text">ticket_id : bigint</text>
+
+      <rect x="850" y="752" width="330" height="22" class="row even"/>
+      <line x1="850" y1="752" x2="1180" y2="752" class="row-line"/>
+      <circle cx="870" cy="763" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="767.4" class="field-text  ">type : varchar(255)</text>
+
+      <rect x="850" y="774" width="330" height="22" class="row odd"/>
+      <line x1="850" y1="774" x2="1180" y2="774" class="row-line"/>
+      <circle cx="870" cy="785" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="789.4" class="field-text  ">path : varchar(255)</text>
+
+      <rect x="850" y="796" width="330" height="22" class="row even"/>
+      <line x1="850" y1="796" x2="1180" y2="796" class="row-line"/>
+      <circle cx="870" cy="807" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="811.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="850" y="818" width="330" height="22" class="row odd"/>
+      <line x1="850" y1="818" x2="1180" y2="818" class="row-line"/>
+      <circle cx="870" cy="829" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="833.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="850" y="680" width="330" height="160" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-ticket_status_histories">
+    <rect x="850" y="970" width="370" height="204" rx="5" class="table-bg"/>
+    <rect x="850" y="970" width="370" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 850 993 L 1220 993 L 1220 998 L 850 998 Z" fill="#0d6efd"/>
+    <text x="861" y="988.5" class="table-title">ticket_status_histories</text>
+    
+      <rect x="850" y="998" width="370" height="22" class="row even"/>
+      <line x1="850" y1="998" x2="1220" y2="998" class="row-line"/>
+      <rect x="858" y="1001.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="870" y="1013" class="badge-text">PK</text>
+      <text x="890" y="1013.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="850" y="1020" width="370" height="22" class="row odd"/>
+      <line x1="850" y1="1020" x2="1220" y2="1020" class="row-line"/>
+      <rect x="858" y="1023.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="870" y="1035" class="badge-text">FK</text>
+      <text x="890" y="1035.4" class="field-text  fk-text">ticket_id : bigint</text>
+
+      <rect x="850" y="1042" width="370" height="22" class="row even"/>
+      <line x1="850" y1="1042" x2="1220" y2="1042" class="row-line"/>
+      <circle cx="870" cy="1053" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="1057.4" class="field-text  ">old_status : varchar(255)</text>
+
+      <rect x="850" y="1064" width="370" height="22" class="row odd"/>
+      <line x1="850" y1="1064" x2="1220" y2="1064" class="row-line"/>
+      <circle cx="870" cy="1075" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="1079.4" class="field-text  ">new_status : varchar(255)</text>
+
+      <rect x="850" y="1086" width="370" height="22" class="row even"/>
+      <line x1="850" y1="1086" x2="1220" y2="1086" class="row-line"/>
+      <rect x="858" y="1089.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="870" y="1101" class="badge-text">FK</text>
+      <text x="890" y="1101.4" class="field-text  fk-text">changed_by_user_id : bigint</text>
+
+      <rect x="850" y="1108" width="370" height="22" class="row odd"/>
+      <line x1="850" y1="1108" x2="1220" y2="1108" class="row-line"/>
+      <circle cx="870" cy="1119" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="1123.4" class="field-text  ">comment : varchar(255)</text>
+
+      <rect x="850" y="1130" width="370" height="22" class="row even"/>
+      <line x1="850" y1="1130" x2="1220" y2="1130" class="row-line"/>
+      <circle cx="870" cy="1141" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="1145.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="850" y="1152" width="370" height="22" class="row odd"/>
+      <line x1="850" y1="1152" x2="1220" y2="1152" class="row-line"/>
+      <circle cx="870" cy="1163" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="1167.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="850" y="970" width="370" height="204" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-ticket_files">
+    <rect x="850" y="1270" width="370" height="182" rx="5" class="table-bg"/>
+    <rect x="850" y="1270" width="370" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 850 1293 L 1220 1293 L 1220 1298 L 850 1298 Z" fill="#0d6efd"/>
+    <text x="861" y="1288.5" class="table-title">ticket_files</text>
+    
+      <rect x="850" y="1298" width="370" height="22" class="row even"/>
+      <line x1="850" y1="1298" x2="1220" y2="1298" class="row-line"/>
+      <rect x="858" y="1301.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="870" y="1313" class="badge-text">PK</text>
+      <text x="890" y="1313.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="850" y="1320" width="370" height="22" class="row odd"/>
+      <line x1="850" y1="1320" x2="1220" y2="1320" class="row-line"/>
+      <rect x="858" y="1323.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="870" y="1335" class="badge-text">FK</text>
+      <text x="890" y="1335.4" class="field-text  fk-text">ticket_id : bigint</text>
+
+      <rect x="850" y="1342" width="370" height="22" class="row even"/>
+      <line x1="850" y1="1342" x2="1220" y2="1342" class="row-line"/>
+      <circle cx="870" cy="1353" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="1357.4" class="field-text  ">original_filename : varchar(255)</text>
+
+      <rect x="850" y="1364" width="370" height="22" class="row odd"/>
+      <line x1="850" y1="1364" x2="1220" y2="1364" class="row-line"/>
+      <circle cx="870" cy="1375" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="1379.4" class="field-text  ">path : varchar(255)</text>
+
+      <rect x="850" y="1386" width="370" height="22" class="row even"/>
+      <line x1="850" y1="1386" x2="1220" y2="1386" class="row-line"/>
+      <rect x="858" y="1389.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="870" y="1401" class="badge-text">FK</text>
+      <text x="890" y="1401.4" class="field-text  fk-text">uploaded_by_user_id : bigint</text>
+
+      <rect x="850" y="1408" width="370" height="22" class="row odd"/>
+      <line x1="850" y1="1408" x2="1220" y2="1408" class="row-line"/>
+      <circle cx="870" cy="1419" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="1423.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="850" y="1430" width="370" height="22" class="row even"/>
+      <line x1="850" y1="1430" x2="1220" y2="1430" class="row-line"/>
+      <circle cx="870" cy="1441" r="2.2" fill="#94a3b8"/>
+      <text x="890" y="1445.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="850" y="1270" width="370" height="182" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-users">
+    <rect x="380" y="520" width="440" height="358" rx="5" class="table-bg"/>
+    <rect x="380" y="520" width="440" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 380 543 L 820 543 L 820 548 L 380 548 Z" fill="#0d6efd"/>
+    <text x="391" y="538.5" class="table-title">users</text>
+    
+      <rect x="380" y="548" width="440" height="22" class="row even"/>
+      <line x1="380" y1="548" x2="820" y2="548" class="row-line"/>
+      <rect x="388" y="551.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="400" y="563" class="badge-text">PK</text>
+      <text x="420" y="563.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="380" y="570" width="440" height="22" class="row odd"/>
+      <line x1="380" y1="570" x2="820" y2="570" class="row-line"/>
+      <circle cx="400" cy="581" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="585.4" class="field-text  ">name : varchar(255)</text>
+
+      <rect x="380" y="592" width="440" height="22" class="row even"/>
+      <line x1="380" y1="592" x2="820" y2="592" class="row-line"/>
+      <circle cx="400" cy="603" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="607.4" class="field-text  ">email : varchar(255)</text>
+
+      <rect x="380" y="614" width="440" height="22" class="row odd"/>
+      <line x1="380" y1="614" x2="820" y2="614" class="row-line"/>
+      <circle cx="400" cy="625" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="629.4" class="field-text  ">email_verified_at : timestamp</text>
+
+      <rect x="380" y="636" width="440" height="22" class="row even"/>
+      <line x1="380" y1="636" x2="820" y2="636" class="row-line"/>
+      <circle cx="400" cy="647" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="651.4" class="field-text  ">password : varchar(255)</text>
+
+      <rect x="380" y="658" width="440" height="22" class="row odd"/>
+      <line x1="380" y1="658" x2="820" y2="658" class="row-line"/>
+      <circle cx="400" cy="669" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="673.4" class="field-text  ">role : varchar(255)</text>
+
+      <rect x="380" y="680" width="440" height="22" class="row even"/>
+      <line x1="380" y1="680" x2="820" y2="680" class="row-line"/>
+      <rect x="388" y="683.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="400" y="695" class="badge-text">FK</text>
+      <text x="420" y="695.4" class="field-text  fk-text">organization_id : bigint</text>
+
+      <rect x="380" y="702" width="440" height="22" class="row odd"/>
+      <line x1="380" y1="702" x2="820" y2="702" class="row-line"/>
+      <circle cx="400" cy="713" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="717.4" class="field-text  ">avatar_path : varchar(255)</text>
+
+      <rect x="380" y="724" width="440" height="22" class="row even"/>
+      <line x1="380" y1="724" x2="820" y2="724" class="row-line"/>
+      <circle cx="400" cy="735" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="739.4" class="field-text  ">banned_at : timestamp</text>
+
+      <rect x="380" y="746" width="440" height="22" class="row odd"/>
+      <line x1="380" y1="746" x2="820" y2="746" class="row-line"/>
+      <circle cx="400" cy="757" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="761.4" class="field-text  ">ban_reason : varchar(255)</text>
+
+      <rect x="380" y="768" width="440" height="22" class="row even"/>
+      <line x1="380" y1="768" x2="820" y2="768" class="row-line"/>
+      <rect x="388" y="771.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="400" y="783" class="badge-text">FK</text>
+      <text x="420" y="783.4" class="field-text  fk-text">banned_by_user_id : bigint</text>
+
+      <rect x="380" y="790" width="440" height="22" class="row odd"/>
+      <line x1="380" y1="790" x2="820" y2="790" class="row-line"/>
+      <circle cx="400" cy="801" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="805.4" class="field-text  ">points_balance : int</text>
+
+      <rect x="380" y="812" width="440" height="22" class="row even"/>
+      <line x1="380" y1="812" x2="820" y2="812" class="row-line"/>
+      <circle cx="400" cy="823" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="827.4" class="field-text  ">remember_token : varchar(100)</text>
+
+      <rect x="380" y="834" width="440" height="22" class="row odd"/>
+      <line x1="380" y1="834" x2="820" y2="834" class="row-line"/>
+      <circle cx="400" cy="845" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="849.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="380" y="856" width="440" height="22" class="row even"/>
+      <line x1="380" y1="856" x2="820" y2="856" class="row-line"/>
+      <circle cx="400" cy="867" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="871.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="380" y="520" width="440" height="358" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-categories">
+    <rect x="1320" y="520" width="320" height="160" rx="5" class="table-bg"/>
+    <rect x="1320" y="520" width="320" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 1320 543 L 1640 543 L 1640 548 L 1320 548 Z" fill="#0d6efd"/>
+    <text x="1331" y="538.5" class="table-title">categories</text>
+    
+      <rect x="1320" y="548" width="320" height="22" class="row even"/>
+      <line x1="1320" y1="548" x2="1640" y2="548" class="row-line"/>
+      <rect x="1328" y="551.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="1340" y="563" class="badge-text">PK</text>
+      <text x="1360" y="563.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="1320" y="570" width="320" height="22" class="row odd"/>
+      <line x1="1320" y1="570" x2="1640" y2="570" class="row-line"/>
+      <circle cx="1340" cy="581" r="2.2" fill="#94a3b8"/>
+      <text x="1360" y="585.4" class="field-text  ">name : varchar(255)</text>
+
+      <rect x="1320" y="592" width="320" height="22" class="row even"/>
+      <line x1="1320" y1="592" x2="1640" y2="592" class="row-line"/>
+      <circle cx="1340" cy="603" r="2.2" fill="#94a3b8"/>
+      <text x="1360" y="607.4" class="field-text  ">icon : varchar(255)</text>
+
+      <rect x="1320" y="614" width="320" height="22" class="row odd"/>
+      <line x1="1320" y1="614" x2="1640" y2="614" class="row-line"/>
+      <circle cx="1340" cy="625" r="2.2" fill="#94a3b8"/>
+      <text x="1360" y="629.4" class="field-text  ">active : tinyint(1)</text>
+
+      <rect x="1320" y="636" width="320" height="22" class="row even"/>
+      <line x1="1320" y1="636" x2="1640" y2="636" class="row-line"/>
+      <circle cx="1340" cy="647" r="2.2" fill="#94a3b8"/>
+      <text x="1360" y="651.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="1320" y="658" width="320" height="22" class="row odd"/>
+      <line x1="1320" y1="658" x2="1640" y2="658" class="row-line"/>
+      <circle cx="1340" cy="669" r="2.2" fill="#94a3b8"/>
+      <text x="1360" y="673.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="1320" y="520" width="320" height="160" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-api_tokens">
+    <rect x="40" y="850" width="340" height="204" rx="5" class="table-bg"/>
+    <rect x="40" y="850" width="340" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 40 873 L 380 873 L 380 878 L 40 878 Z" fill="#0d6efd"/>
+    <text x="51" y="868.5" class="table-title">api_tokens</text>
+    
+      <rect x="40" y="878" width="340" height="22" class="row even"/>
+      <line x1="40" y1="878" x2="380" y2="878" class="row-line"/>
+      <rect x="48" y="881.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="60" y="893" class="badge-text">PK</text>
+      <text x="80" y="893.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="40" y="900" width="340" height="22" class="row odd"/>
+      <line x1="40" y1="900" x2="380" y2="900" class="row-line"/>
+      <rect x="48" y="903.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="60" y="915" class="badge-text">FK</text>
+      <text x="80" y="915.4" class="field-text  fk-text">user_id : bigint</text>
+
+      <rect x="40" y="922" width="340" height="22" class="row even"/>
+      <line x1="40" y1="922" x2="380" y2="922" class="row-line"/>
+      <circle cx="60" cy="933" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="937.4" class="field-text  ">name : varchar(255)</text>
+
+      <rect x="40" y="944" width="340" height="22" class="row odd"/>
+      <line x1="40" y1="944" x2="380" y2="944" class="row-line"/>
+      <circle cx="60" cy="955" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="959.4" class="field-text  ">token_hash : varchar(64)</text>
+
+      <rect x="40" y="966" width="340" height="22" class="row even"/>
+      <line x1="40" y1="966" x2="380" y2="966" class="row-line"/>
+      <circle cx="60" cy="977" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="981.4" class="field-text  ">last_used_at : timestamp</text>
+
+      <rect x="40" y="988" width="340" height="22" class="row odd"/>
+      <line x1="40" y1="988" x2="380" y2="988" class="row-line"/>
+      <circle cx="60" cy="999" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="1003.4" class="field-text  ">expires_at : timestamp</text>
+
+      <rect x="40" y="1010" width="340" height="22" class="row even"/>
+      <line x1="40" y1="1010" x2="380" y2="1010" class="row-line"/>
+      <circle cx="60" cy="1021" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="1025.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="40" y="1032" width="340" height="22" class="row odd"/>
+      <line x1="40" y1="1032" x2="380" y2="1032" class="row-line"/>
+      <circle cx="60" cy="1043" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="1047.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="40" y="850" width="340" height="204" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-news">
+    <rect x="380" y="1600" width="390" height="226" rx="5" class="table-bg"/>
+    <rect x="380" y="1600" width="390" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 380 1623 L 770 1623 L 770 1628 L 380 1628 Z" fill="#0d6efd"/>
+    <text x="391" y="1618.5" class="table-title">news</text>
+    
+      <rect x="380" y="1628" width="390" height="22" class="row even"/>
+      <line x1="380" y1="1628" x2="770" y2="1628" class="row-line"/>
+      <rect x="388" y="1631.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="400" y="1643" class="badge-text">PK</text>
+      <text x="420" y="1643.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="380" y="1650" width="390" height="22" class="row odd"/>
+      <line x1="380" y1="1650" x2="770" y2="1650" class="row-line"/>
+      <circle cx="400" cy="1661" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="1665.4" class="field-text  ">title : varchar(255)</text>
+
+      <rect x="380" y="1672" width="390" height="22" class="row even"/>
+      <line x1="380" y1="1672" x2="770" y2="1672" class="row-line"/>
+      <circle cx="400" cy="1683" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="1687.4" class="field-text  ">body : text</text>
+
+      <rect x="380" y="1694" width="390" height="22" class="row odd"/>
+      <line x1="380" y1="1694" x2="770" y2="1694" class="row-line"/>
+      <circle cx="400" cy="1705" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="1709.4" class="field-text  ">published_date : date</text>
+
+      <rect x="380" y="1716" width="390" height="22" class="row even"/>
+      <line x1="380" y1="1716" x2="770" y2="1716" class="row-line"/>
+      <circle cx="400" cy="1727" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="1731.4" class="field-text  ">active : tinyint(1)</text>
+
+      <rect x="380" y="1738" width="390" height="22" class="row odd"/>
+      <line x1="380" y1="1738" x2="770" y2="1738" class="row-line"/>
+      <rect x="388" y="1741.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="400" y="1753" class="badge-text">FK</text>
+      <text x="420" y="1753.4" class="field-text  fk-text">created_by_user_id : bigint</text>
+
+      <rect x="380" y="1760" width="390" height="22" class="row even"/>
+      <line x1="380" y1="1760" x2="770" y2="1760" class="row-line"/>
+      <rect x="388" y="1763.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="400" y="1775" class="badge-text">FK</text>
+      <text x="420" y="1775.4" class="field-text  fk-text">organization_id : bigint</text>
+
+      <rect x="380" y="1782" width="390" height="22" class="row odd"/>
+      <line x1="380" y1="1782" x2="770" y2="1782" class="row-line"/>
+      <circle cx="400" cy="1793" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="1797.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="380" y="1804" width="390" height="22" class="row even"/>
+      <line x1="380" y1="1804" x2="770" y2="1804" class="row-line"/>
+      <circle cx="400" cy="1815" r="2.2" fill="#94a3b8"/>
+      <text x="420" y="1819.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="380" y="1600" width="390" height="226" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-tickets">
+    <rect x="1360" y="820" width="430" height="424" rx="5" class="table-bg"/>
+    <rect x="1360" y="820" width="430" height="28" rx="5" fill="#0b73e7"/>
+    <path d="M 1360 843 L 1790 843 L 1790 848 L 1360 848 Z" fill="#0b73e7"/>
+    <text x="1371" y="838.5" class="table-title">tickets</text>
+    
+      <rect x="1360" y="848" width="430" height="22" class="row even"/>
+      <line x1="1360" y1="848" x2="1790" y2="848" class="row-line"/>
+      <rect x="1368" y="851.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="1380" y="863" class="badge-text">PK</text>
+      <text x="1400" y="863.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="1360" y="870" width="430" height="22" class="row odd"/>
+      <line x1="1360" y1="870" x2="1790" y2="870" class="row-line"/>
+      <rect x="1368" y="873.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1380" y="885" class="badge-text">FK</text>
+      <text x="1400" y="885.4" class="field-text  fk-text">user_id : bigint</text>
+
+      <rect x="1360" y="892" width="430" height="22" class="row even"/>
+      <line x1="1360" y1="892" x2="1790" y2="892" class="row-line"/>
+      <rect x="1368" y="895.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1380" y="907" class="badge-text">FK</text>
+      <text x="1400" y="907.4" class="field-text  fk-text">category_id : bigint</text>
+
+      <rect x="1360" y="914" width="430" height="22" class="row odd"/>
+      <line x1="1360" y1="914" x2="1790" y2="914" class="row-line"/>
+      <rect x="1368" y="917.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1380" y="929" class="badge-text">FK</text>
+      <text x="1400" y="929.4" class="field-text  fk-text">assigned_org_id : bigint</text>
+
+      <rect x="1360" y="936" width="430" height="22" class="row even"/>
+      <line x1="1360" y1="936" x2="1790" y2="936" class="row-line"/>
+      <rect x="1368" y="939.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1380" y="951" class="badge-text">FK</text>
+      <text x="1400" y="951.4" class="field-text  fk-text">assigned_worker_id : bigint</text>
+
+      <rect x="1360" y="958" width="430" height="22" class="row odd"/>
+      <line x1="1360" y1="958" x2="1790" y2="958" class="row-line"/>
+      <circle cx="1380" cy="969" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="973.4" class="field-text  ">status : varchar(255)</text>
+
+      <rect x="1360" y="980" width="430" height="22" class="row even"/>
+      <line x1="1360" y1="980" x2="1790" y2="980" class="row-line"/>
+      <circle cx="1380" cy="991" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="995.4" class="field-text  ">priority : varchar(255)</text>
+
+      <rect x="1360" y="1002" width="430" height="22" class="row odd"/>
+      <line x1="1360" y1="1002" x2="1790" y2="1002" class="row-line"/>
+      <circle cx="1380" cy="1013" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="1017.4" class="field-text  ">available_to_residents : tinyint(1)</text>
+
+      <rect x="1360" y="1024" width="430" height="22" class="row even"/>
+      <line x1="1360" y1="1024" x2="1790" y2="1024" class="row-line"/>
+      <circle cx="1380" cy="1035" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="1039.4" class="field-text  ">lat : decimal(10,7)</text>
+
+      <rect x="1360" y="1046" width="430" height="22" class="row odd"/>
+      <line x1="1360" y1="1046" x2="1790" y2="1046" class="row-line"/>
+      <circle cx="1380" cy="1057" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="1061.4" class="field-text  ">lng : decimal(10,7)</text>
+
+      <rect x="1360" y="1068" width="430" height="22" class="row even"/>
+      <line x1="1360" y1="1068" x2="1790" y2="1068" class="row-line"/>
+      <circle cx="1380" cy="1079" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="1083.4" class="field-text  ">address_text : varchar(255)</text>
+
+      <rect x="1360" y="1090" width="430" height="22" class="row odd"/>
+      <line x1="1360" y1="1090" x2="1790" y2="1090" class="row-line"/>
+      <circle cx="1380" cy="1101" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="1105.4" class="field-text  ">description : varchar(200)</text>
+
+      <rect x="1360" y="1112" width="430" height="22" class="row even"/>
+      <line x1="1360" y1="1112" x2="1790" y2="1112" class="row-line"/>
+      <circle cx="1380" cy="1123" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="1127.4" class="field-text  ">closed_at : timestamp</text>
+
+      <rect x="1360" y="1134" width="430" height="22" class="row odd"/>
+      <line x1="1360" y1="1134" x2="1790" y2="1134" class="row-line"/>
+      <rect x="1368" y="1137.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1380" y="1149" class="badge-text">FK</text>
+      <text x="1400" y="1149.4" class="field-text  fk-text">deleted_by_user_id : bigint</text>
+
+      <rect x="1360" y="1156" width="430" height="22" class="row even"/>
+      <line x1="1360" y1="1156" x2="1790" y2="1156" class="row-line"/>
+      <circle cx="1380" cy="1167" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="1171.4" class="field-text  ">deleted_at : timestamp</text>
+
+      <rect x="1360" y="1178" width="430" height="22" class="row odd"/>
+      <line x1="1360" y1="1178" x2="1790" y2="1178" class="row-line"/>
+      <circle cx="1380" cy="1189" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="1193.4" class="field-text  ">delete_reason : varchar(255)</text>
+
+      <rect x="1360" y="1200" width="430" height="22" class="row even"/>
+      <line x1="1360" y1="1200" x2="1790" y2="1200" class="row-line"/>
+      <circle cx="1380" cy="1211" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="1215.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="1360" y="1222" width="430" height="22" class="row odd"/>
+      <line x1="1360" y1="1222" x2="1790" y2="1222" class="row-line"/>
+      <circle cx="1380" cy="1233" r="2.2" fill="#94a3b8"/>
+      <text x="1400" y="1237.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="1360" y="820" width="430" height="424" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-news_photos">
+    <rect x="820" y="1600" width="330" height="160" rx="5" class="table-bg"/>
+    <rect x="820" y="1600" width="330" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 820 1623 L 1150 1623 L 1150 1628 L 820 1628 Z" fill="#0d6efd"/>
+    <text x="831" y="1618.5" class="table-title">news_photos</text>
+    
+      <rect x="820" y="1628" width="330" height="22" class="row even"/>
+      <line x1="820" y1="1628" x2="1150" y2="1628" class="row-line"/>
+      <rect x="828" y="1631.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="840" y="1643" class="badge-text">PK</text>
+      <text x="860" y="1643.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="820" y="1650" width="330" height="22" class="row odd"/>
+      <line x1="820" y1="1650" x2="1150" y2="1650" class="row-line"/>
+      <rect x="828" y="1653.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="840" y="1665" class="badge-text">FK</text>
+      <text x="860" y="1665.4" class="field-text  fk-text">news_id : bigint</text>
+
+      <rect x="820" y="1672" width="330" height="22" class="row even"/>
+      <line x1="820" y1="1672" x2="1150" y2="1672" class="row-line"/>
+      <circle cx="840" cy="1683" r="2.2" fill="#94a3b8"/>
+      <text x="860" y="1687.4" class="field-text  ">path : varchar(255)</text>
+
+      <rect x="820" y="1694" width="330" height="22" class="row odd"/>
+      <line x1="820" y1="1694" x2="1150" y2="1694" class="row-line"/>
+      <circle cx="840" cy="1705" r="2.2" fill="#94a3b8"/>
+      <text x="860" y="1709.4" class="field-text  ">sort_order : int</text>
+
+      <rect x="820" y="1716" width="330" height="22" class="row even"/>
+      <line x1="820" y1="1716" x2="1150" y2="1716" class="row-line"/>
+      <circle cx="840" cy="1727" r="2.2" fill="#94a3b8"/>
+      <text x="860" y="1731.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="820" y="1738" width="330" height="22" class="row odd"/>
+      <line x1="820" y1="1738" x2="1150" y2="1738" class="row-line"/>
+      <circle cx="840" cy="1749" r="2.2" fill="#94a3b8"/>
+      <text x="860" y="1753.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="820" y="1600" width="330" height="160" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-organizations">
+    <rect x="2360" y="520" width="440" height="270" rx="5" class="table-bg"/>
+    <rect x="2360" y="520" width="440" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 2360 543 L 2800 543 L 2800 548 L 2360 548 Z" fill="#0d6efd"/>
+    <text x="2371" y="538.5" class="table-title">organizations</text>
+    
+      <rect x="2360" y="548" width="440" height="22" class="row even"/>
+      <line x1="2360" y1="548" x2="2800" y2="548" class="row-line"/>
+      <rect x="2368" y="551.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="2380" y="563" class="badge-text">PK</text>
+      <text x="2400" y="563.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="2360" y="570" width="440" height="22" class="row odd"/>
+      <line x1="2360" y1="570" x2="2800" y2="570" class="row-line"/>
+      <circle cx="2380" cy="581" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="585.4" class="field-text  ">name : varchar(255)</text>
+
+      <rect x="2360" y="592" width="440" height="22" class="row even"/>
+      <line x1="2360" y1="592" x2="2800" y2="592" class="row-line"/>
+      <rect x="2368" y="595.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="2380" y="607" class="badge-text">FK</text>
+      <text x="2400" y="607.4" class="field-text  fk-text">city_id : bigint</text>
+
+      <rect x="2360" y="614" width="440" height="22" class="row odd"/>
+      <line x1="2360" y1="614" x2="2800" y2="614" class="row-line"/>
+      <circle cx="2380" cy="625" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="629.4" class="field-text  ">district : varchar(255)</text>
+
+      <rect x="2360" y="636" width="440" height="22" class="row even"/>
+      <line x1="2360" y1="636" x2="2800" y2="636" class="row-line"/>
+      <circle cx="2380" cy="647" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="651.4" class="field-text  ">address : varchar(255)</text>
+
+      <rect x="2360" y="658" width="440" height="22" class="row odd"/>
+      <line x1="2360" y1="658" x2="2800" y2="658" class="row-line"/>
+      <circle cx="2380" cy="669" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="673.4" class="field-text  ">lat : decimal(10,7)</text>
+
+      <rect x="2360" y="680" width="440" height="22" class="row even"/>
+      <line x1="2360" y1="680" x2="2800" y2="680" class="row-line"/>
+      <circle cx="2380" cy="691" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="695.4" class="field-text  ">lng : decimal(10,7)</text>
+
+      <rect x="2360" y="702" width="440" height="22" class="row odd"/>
+      <line x1="2360" y1="702" x2="2800" y2="702" class="row-line"/>
+      <circle cx="2380" cy="713" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="717.4" class="field-text  ">contact_info : varchar(255)</text>
+
+      <rect x="2360" y="724" width="440" height="22" class="row even"/>
+      <line x1="2360" y1="724" x2="2800" y2="724" class="row-line"/>
+      <circle cx="2380" cy="735" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="739.4" class="field-text  ">active : tinyint(1)</text>
+
+      <rect x="2360" y="746" width="440" height="22" class="row odd"/>
+      <line x1="2360" y1="746" x2="2800" y2="746" class="row-line"/>
+      <circle cx="2380" cy="757" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="761.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="2360" y="768" width="440" height="22" class="row even"/>
+      <line x1="2360" y1="768" x2="2800" y2="768" class="row-line"/>
+      <circle cx="2380" cy="779" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="783.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="2360" y="520" width="440" height="270" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-ticket_hides">
+    <rect x="1880" y="1050" width="360" height="204" rx="5" class="table-bg"/>
+    <rect x="1880" y="1050" width="360" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 1880 1073 L 2240 1073 L 2240 1078 L 1880 1078 Z" fill="#0d6efd"/>
+    <text x="1891" y="1068.5" class="table-title">ticket_hides</text>
+    
+      <rect x="1880" y="1078" width="360" height="22" class="row even"/>
+      <line x1="1880" y1="1078" x2="2240" y2="1078" class="row-line"/>
+      <rect x="1888" y="1081.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="1900" y="1093" class="badge-text">PK</text>
+      <text x="1920" y="1093.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="1880" y="1100" width="360" height="22" class="row odd"/>
+      <line x1="1880" y1="1100" x2="2240" y2="1100" class="row-line"/>
+      <rect x="1888" y="1103.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="1115" class="badge-text">FK</text>
+      <text x="1920" y="1115.4" class="field-text  fk-text">ticket_id : bigint</text>
+
+      <rect x="1880" y="1122" width="360" height="22" class="row even"/>
+      <line x1="1880" y1="1122" x2="2240" y2="1122" class="row-line"/>
+      <rect x="1888" y="1125.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="1137" class="badge-text">FK</text>
+      <text x="1920" y="1137.4" class="field-text  fk-text">organization_id : bigint</text>
+
+      <rect x="1880" y="1144" width="360" height="22" class="row odd"/>
+      <line x1="1880" y1="1144" x2="2240" y2="1144" class="row-line"/>
+      <rect x="1888" y="1147.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="1159" class="badge-text">FK</text>
+      <text x="1920" y="1159.4" class="field-text  fk-text">hidden_by_user_id : bigint</text>
+
+      <rect x="1880" y="1166" width="360" height="22" class="row even"/>
+      <line x1="1880" y1="1166" x2="2240" y2="1166" class="row-line"/>
+      <circle cx="1900" cy="1177" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1181.4" class="field-text  ">reason : varchar(255)</text>
+
+      <rect x="1880" y="1188" width="360" height="22" class="row odd"/>
+      <line x1="1880" y1="1188" x2="2240" y2="1188" class="row-line"/>
+      <circle cx="1900" cy="1199" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1203.4" class="field-text  ">active : tinyint(1)</text>
+
+      <rect x="1880" y="1210" width="360" height="22" class="row even"/>
+      <line x1="1880" y1="1210" x2="2240" y2="1210" class="row-line"/>
+      <circle cx="1900" cy="1221" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1225.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="1880" y="1232" width="360" height="22" class="row odd"/>
+      <line x1="1880" y1="1232" x2="2240" y2="1232" class="row-line"/>
+      <circle cx="1900" cy="1243" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1247.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="1880" y="1050" width="360" height="204" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-rewards">
+    <rect x="2360" y="1540" width="410" height="314" rx="5" class="table-bg"/>
+    <rect x="2360" y="1540" width="410" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 2360 1563 L 2770 1563 L 2770 1568 L 2360 1568 Z" fill="#0d6efd"/>
+    <text x="2371" y="1558.5" class="table-title">rewards</text>
+    
+      <rect x="2360" y="1568" width="410" height="22" class="row even"/>
+      <line x1="2360" y1="1568" x2="2770" y2="1568" class="row-line"/>
+      <rect x="2368" y="1571.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="2380" y="1583" class="badge-text">PK</text>
+      <text x="2400" y="1583.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="2360" y="1590" width="410" height="22" class="row odd"/>
+      <line x1="2360" y1="1590" x2="2770" y2="1590" class="row-line"/>
+      <circle cx="2380" cy="1601" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="1605.4" class="field-text  ">title : varchar(255)</text>
+
+      <rect x="2360" y="1612" width="410" height="22" class="row even"/>
+      <line x1="2360" y1="1612" x2="2770" y2="1612" class="row-line"/>
+      <circle cx="2380" cy="1623" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="1627.4" class="field-text  ">description : text</text>
+
+      <rect x="2360" y="1634" width="410" height="22" class="row odd"/>
+      <line x1="2360" y1="1634" x2="2770" y2="1634" class="row-line"/>
+      <circle cx="2380" cy="1645" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="1649.4" class="field-text  ">photo_path : varchar(255)</text>
+
+      <rect x="2360" y="1656" width="410" height="22" class="row even"/>
+      <line x1="2360" y1="1656" x2="2770" y2="1656" class="row-line"/>
+      <circle cx="2380" cy="1667" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="1671.4" class="field-text  ">points_required : int</text>
+
+      <rect x="2360" y="1678" width="410" height="22" class="row odd"/>
+      <line x1="2360" y1="1678" x2="2770" y2="1678" class="row-line"/>
+      <circle cx="2380" cy="1689" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="1693.4" class="field-text  ">code : varchar(255)</text>
+
+      <rect x="2360" y="1700" width="410" height="22" class="row even"/>
+      <line x1="2360" y1="1700" x2="2770" y2="1700" class="row-line"/>
+      <circle cx="2380" cy="1711" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="1715.4" class="field-text  ">valid_from : date</text>
+
+      <rect x="2360" y="1722" width="410" height="22" class="row odd"/>
+      <line x1="2360" y1="1722" x2="2770" y2="1722" class="row-line"/>
+      <circle cx="2380" cy="1733" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="1737.4" class="field-text  ">valid_to : date</text>
+
+      <rect x="2360" y="1744" width="410" height="22" class="row even"/>
+      <line x1="2360" y1="1744" x2="2770" y2="1744" class="row-line"/>
+      <circle cx="2380" cy="1755" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="1759.4" class="field-text  ">active : tinyint(1)</text>
+
+      <rect x="2360" y="1766" width="410" height="22" class="row odd"/>
+      <line x1="2360" y1="1766" x2="2770" y2="1766" class="row-line"/>
+      <rect x="2368" y="1769.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="2380" y="1781" class="badge-text">FK</text>
+      <text x="2400" y="1781.4" class="field-text  fk-text">created_by_user_id : bigint</text>
+
+      <rect x="2360" y="1788" width="410" height="22" class="row even"/>
+      <line x1="2360" y1="1788" x2="2770" y2="1788" class="row-line"/>
+      <rect x="2368" y="1791.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="2380" y="1803" class="badge-text">FK</text>
+      <text x="2400" y="1803.4" class="field-text  fk-text">organization_id : bigint</text>
+
+      <rect x="2360" y="1810" width="410" height="22" class="row odd"/>
+      <line x1="2360" y1="1810" x2="2770" y2="1810" class="row-line"/>
+      <circle cx="2380" cy="1821" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="1825.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="2360" y="1832" width="410" height="22" class="row even"/>
+      <line x1="2360" y1="1832" x2="2770" y2="1832" class="row-line"/>
+      <circle cx="2380" cy="1843" r="2.2" fill="#94a3b8"/>
+      <text x="2400" y="1847.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="2360" y="1540" width="410" height="314" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-cities">
+    <rect x="2860" y="520" width="330" height="160" rx="5" class="table-bg"/>
+    <rect x="2860" y="520" width="330" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 2860 543 L 3190 543 L 3190 548 L 2860 548 Z" fill="#0d6efd"/>
+    <text x="2871" y="538.5" class="table-title">cities</text>
+    
+      <rect x="2860" y="548" width="330" height="22" class="row even"/>
+      <line x1="2860" y1="548" x2="3190" y2="548" class="row-line"/>
+      <rect x="2868" y="551.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="2880" y="563" class="badge-text">PK</text>
+      <text x="2900" y="563.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="2860" y="570" width="330" height="22" class="row odd"/>
+      <line x1="2860" y1="570" x2="3190" y2="570" class="row-line"/>
+      <circle cx="2880" cy="581" r="2.2" fill="#94a3b8"/>
+      <text x="2900" y="585.4" class="field-text  ">name : varchar(255)</text>
+
+      <rect x="2860" y="592" width="330" height="22" class="row even"/>
+      <line x1="2860" y1="592" x2="3190" y2="592" class="row-line"/>
+      <circle cx="2880" cy="603" r="2.2" fill="#94a3b8"/>
+      <text x="2900" y="607.4" class="field-text  ">region : varchar(255)</text>
+
+      <rect x="2860" y="614" width="330" height="22" class="row odd"/>
+      <line x1="2860" y1="614" x2="3190" y2="614" class="row-line"/>
+      <circle cx="2880" cy="625" r="2.2" fill="#94a3b8"/>
+      <text x="2900" y="629.4" class="field-text  ">active : tinyint(1)</text>
+
+      <rect x="2860" y="636" width="330" height="22" class="row even"/>
+      <line x1="2860" y1="636" x2="3190" y2="636" class="row-line"/>
+      <circle cx="2880" cy="647" r="2.2" fill="#94a3b8"/>
+      <text x="2900" y="651.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="2860" y="658" width="330" height="22" class="row odd"/>
+      <line x1="2860" y1="658" x2="3190" y2="658" class="row-line"/>
+      <circle cx="2880" cy="669" r="2.2" fill="#94a3b8"/>
+      <text x="2900" y="673.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="2860" y="520" width="330" height="160" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-ticket_claim_requests">
+    <rect x="1880" y="740" width="390" height="270" rx="5" class="table-bg"/>
+    <rect x="1880" y="740" width="390" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 1880 763 L 2270 763 L 2270 768 L 1880 768 Z" fill="#0d6efd"/>
+    <text x="1891" y="758.5" class="table-title">ticket_claim_requests</text>
+    
+      <rect x="1880" y="768" width="390" height="22" class="row even"/>
+      <line x1="1880" y1="768" x2="2270" y2="768" class="row-line"/>
+      <rect x="1888" y="771.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="1900" y="783" class="badge-text">PK</text>
+      <text x="1920" y="783.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="1880" y="790" width="390" height="22" class="row odd"/>
+      <line x1="1880" y1="790" x2="2270" y2="790" class="row-line"/>
+      <rect x="1888" y="793.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="805" class="badge-text">FK</text>
+      <text x="1920" y="805.4" class="field-text  fk-text">ticket_id : bigint</text>
+
+      <rect x="1880" y="812" width="390" height="22" class="row even"/>
+      <line x1="1880" y1="812" x2="2270" y2="812" class="row-line"/>
+      <rect x="1888" y="815.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="827" class="badge-text">FK</text>
+      <text x="1920" y="827.4" class="field-text  fk-text">worker_id : bigint</text>
+
+      <rect x="1880" y="834" width="390" height="22" class="row odd"/>
+      <line x1="1880" y1="834" x2="2270" y2="834" class="row-line"/>
+      <rect x="1888" y="837.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="849" class="badge-text">FK</text>
+      <text x="1920" y="849.4" class="field-text  fk-text">organization_id : bigint</text>
+
+      <rect x="1880" y="856" width="390" height="22" class="row even"/>
+      <line x1="1880" y1="856" x2="2270" y2="856" class="row-line"/>
+      <circle cx="1900" cy="867" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="871.4" class="field-text  ">status : varchar(30)</text>
+
+      <rect x="1880" y="878" width="390" height="22" class="row odd"/>
+      <line x1="1880" y1="878" x2="2270" y2="878" class="row-line"/>
+      <circle cx="1900" cy="889" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="893.4" class="field-text  ">comment : varchar(255)</text>
+
+      <rect x="1880" y="900" width="390" height="22" class="row even"/>
+      <line x1="1880" y1="900" x2="2270" y2="900" class="row-line"/>
+      <rect x="1888" y="903.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="915" class="badge-text">FK</text>
+      <text x="1920" y="915.4" class="field-text  fk-text">reviewed_by_user_id : bigint</text>
+
+      <rect x="1880" y="922" width="390" height="22" class="row odd"/>
+      <line x1="1880" y1="922" x2="2270" y2="922" class="row-line"/>
+      <circle cx="1900" cy="933" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="937.4" class="field-text  ">reviewed_at : timestamp</text>
+
+      <rect x="1880" y="944" width="390" height="22" class="row even"/>
+      <line x1="1880" y1="944" x2="2270" y2="944" class="row-line"/>
+      <circle cx="1900" cy="955" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="959.4" class="field-text  ">resolution : text</text>
+
+      <rect x="1880" y="966" width="390" height="22" class="row odd"/>
+      <line x1="1880" y1="966" x2="2270" y2="966" class="row-line"/>
+      <circle cx="1900" cy="977" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="981.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="1880" y="988" width="390" height="22" class="row even"/>
+      <line x1="1880" y1="988" x2="2270" y2="988" class="row-line"/>
+      <circle cx="1900" cy="999" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1003.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="1880" y="740" width="390" height="270" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-organization_complaints">
+    <rect x="1880" y="1350" width="410" height="336" rx="5" class="table-bg"/>
+    <rect x="1880" y="1350" width="410" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 1880 1373 L 2290 1373 L 2290 1378 L 1880 1378 Z" fill="#0d6efd"/>
+    <text x="1891" y="1368.5" class="table-title">organization_complaints</text>
+    
+      <rect x="1880" y="1378" width="410" height="22" class="row even"/>
+      <line x1="1880" y1="1378" x2="2290" y2="1378" class="row-line"/>
+      <rect x="1888" y="1381.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="1900" y="1393" class="badge-text">PK</text>
+      <text x="1920" y="1393.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="1880" y="1400" width="410" height="22" class="row odd"/>
+      <line x1="1880" y1="1400" x2="2290" y2="1400" class="row-line"/>
+      <rect x="1888" y="1403.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="1415" class="badge-text">FK</text>
+      <text x="1920" y="1415.4" class="field-text  fk-text">organization_id : bigint</text>
+
+      <rect x="1880" y="1422" width="410" height="22" class="row even"/>
+      <line x1="1880" y1="1422" x2="2290" y2="1422" class="row-line"/>
+      <rect x="1888" y="1425.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="1437" class="badge-text">FK</text>
+      <text x="1920" y="1437.4" class="field-text  fk-text">created_by_user_id : bigint</text>
+
+      <rect x="1880" y="1444" width="410" height="22" class="row odd"/>
+      <line x1="1880" y1="1444" x2="2290" y2="1444" class="row-line"/>
+      <rect x="1888" y="1447.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="1459" class="badge-text">FK</text>
+      <text x="1920" y="1459.4" class="field-text  fk-text">target_user_id : bigint</text>
+
+      <rect x="1880" y="1466" width="410" height="22" class="row even"/>
+      <line x1="1880" y1="1466" x2="2290" y2="1466" class="row-line"/>
+      <rect x="1888" y="1469.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="1481" class="badge-text">FK</text>
+      <text x="1920" y="1481.4" class="field-text  fk-text">ticket_id : bigint</text>
+
+      <rect x="1880" y="1488" width="410" height="22" class="row odd"/>
+      <line x1="1880" y1="1488" x2="2290" y2="1488" class="row-line"/>
+      <circle cx="1900" cy="1499" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1503.4" class="field-text  ">type : varchar(40)</text>
+
+      <rect x="1880" y="1510" width="410" height="22" class="row even"/>
+      <line x1="1880" y1="1510" x2="2290" y2="1510" class="row-line"/>
+      <circle cx="1900" cy="1521" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1525.4" class="field-text  ">status : varchar(30)</text>
+
+      <rect x="1880" y="1532" width="410" height="22" class="row odd"/>
+      <line x1="1880" y1="1532" x2="2290" y2="1532" class="row-line"/>
+      <circle cx="1900" cy="1543" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1547.4" class="field-text  ">title : varchar(160)</text>
+
+      <rect x="1880" y="1554" width="410" height="22" class="row even"/>
+      <line x1="1880" y1="1554" x2="2290" y2="1554" class="row-line"/>
+      <circle cx="1900" cy="1565" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1569.4" class="field-text  ">description : text</text>
+
+      <rect x="1880" y="1576" width="410" height="22" class="row odd"/>
+      <line x1="1880" y1="1576" x2="2290" y2="1576" class="row-line"/>
+      <rect x="1888" y="1579.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1900" y="1591" class="badge-text">FK</text>
+      <text x="1920" y="1591.4" class="field-text  fk-text">reviewed_by_user_id : bigint</text>
+
+      <rect x="1880" y="1598" width="410" height="22" class="row even"/>
+      <line x1="1880" y1="1598" x2="2290" y2="1598" class="row-line"/>
+      <circle cx="1900" cy="1609" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1613.4" class="field-text  ">reviewed_at : timestamp</text>
+
+      <rect x="1880" y="1620" width="410" height="22" class="row odd"/>
+      <line x1="1880" y1="1620" x2="2290" y2="1620" class="row-line"/>
+      <circle cx="1900" cy="1631" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1635.4" class="field-text  ">resolution : text</text>
+
+      <rect x="1880" y="1642" width="410" height="22" class="row even"/>
+      <line x1="1880" y1="1642" x2="2290" y2="1642" class="row-line"/>
+      <circle cx="1900" cy="1653" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1657.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="1880" y="1664" width="410" height="22" class="row odd"/>
+      <line x1="1880" y1="1664" x2="2290" y2="1664" class="row-line"/>
+      <circle cx="1900" cy="1675" r="2.2" fill="#94a3b8"/>
+      <text x="1920" y="1679.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="1880" y="1350" width="410" height="336" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-points_transactions">
+    <rect x="40" y="1160" width="380" height="204" rx="5" class="table-bg"/>
+    <rect x="40" y="1160" width="380" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 40 1183 L 420 1183 L 420 1188 L 40 1188 Z" fill="#0d6efd"/>
+    <text x="51" y="1178.5" class="table-title">points_transactions</text>
+    
+      <rect x="40" y="1188" width="380" height="22" class="row even"/>
+      <line x1="40" y1="1188" x2="420" y2="1188" class="row-line"/>
+      <rect x="48" y="1191.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="60" y="1203" class="badge-text">PK</text>
+      <text x="80" y="1203.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="40" y="1210" width="380" height="22" class="row odd"/>
+      <line x1="40" y1="1210" x2="420" y2="1210" class="row-line"/>
+      <rect x="48" y="1213.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="60" y="1225" class="badge-text">FK</text>
+      <text x="80" y="1225.4" class="field-text  fk-text">user_id : bigint</text>
+
+      <rect x="40" y="1232" width="380" height="22" class="row even"/>
+      <line x1="40" y1="1232" x2="420" y2="1232" class="row-line"/>
+      <circle cx="60" cy="1243" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="1247.4" class="field-text  ">amount : int</text>
+
+      <rect x="40" y="1254" width="380" height="22" class="row odd"/>
+      <line x1="40" y1="1254" x2="420" y2="1254" class="row-line"/>
+      <circle cx="60" cy="1265" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="1269.4" class="field-text  ">balance_after : int</text>
+
+      <rect x="40" y="1276" width="380" height="22" class="row even"/>
+      <line x1="40" y1="1276" x2="420" y2="1276" class="row-line"/>
+      <circle cx="60" cy="1287" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="1291.4" class="field-text  ">reason : varchar(255)</text>
+
+      <rect x="40" y="1298" width="380" height="22" class="row odd"/>
+      <line x1="40" y1="1298" x2="420" y2="1298" class="row-line"/>
+      <rect x="48" y="1301.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="60" y="1313" class="badge-text">FK</text>
+      <text x="80" y="1313.4" class="field-text  fk-text">admin_id : bigint</text>
+
+      <rect x="40" y="1320" width="380" height="22" class="row even"/>
+      <line x1="40" y1="1320" x2="420" y2="1320" class="row-line"/>
+      <circle cx="60" cy="1331" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="1335.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="40" y="1342" width="380" height="22" class="row odd"/>
+      <line x1="40" y1="1342" x2="420" y2="1342" class="row-line"/>
+      <circle cx="60" cy="1353" r="2.2" fill="#94a3b8"/>
+      <text x="80" y="1357.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="40" y="1160" width="380" height="204" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-worker_registration_codes">
+    <rect x="1370" y="120" width="390" height="358" rx="5" class="table-bg"/>
+    <rect x="1370" y="120" width="390" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 1370 143 L 1760 143 L 1760 148 L 1370 148 Z" fill="#0d6efd"/>
+    <text x="1381" y="138.5" class="table-title">worker_registration_codes</text>
+    
+      <rect x="1370" y="148" width="390" height="22" class="row even"/>
+      <line x1="1370" y1="148" x2="1760" y2="148" class="row-line"/>
+      <rect x="1378" y="151.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="1390" y="163" class="badge-text">PK</text>
+      <text x="1410" y="163.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="1370" y="170" width="390" height="22" class="row odd"/>
+      <line x1="1370" y1="170" x2="1760" y2="170" class="row-line"/>
+      <circle cx="1390" cy="181" r="2.2" fill="#94a3b8"/>
+      <text x="1410" y="185.4" class="field-text  ">code : varchar(32)</text>
+
+      <rect x="1370" y="192" width="390" height="22" class="row even"/>
+      <line x1="1370" y1="192" x2="1760" y2="192" class="row-line"/>
+      <circle cx="1390" cy="203" r="2.2" fill="#94a3b8"/>
+      <text x="1410" y="207.4" class="field-text  ">issued_to : varchar(120)</text>
+
+      <rect x="1370" y="214" width="390" height="22" class="row odd"/>
+      <line x1="1370" y1="214" x2="1760" y2="214" class="row-line"/>
+      <rect x="1378" y="217.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1390" y="229" class="badge-text">FK</text>
+      <text x="1410" y="229.4" class="field-text  fk-text">organization_id : bigint</text>
+
+      <rect x="1370" y="236" width="390" height="22" class="row even"/>
+      <line x1="1370" y1="236" x2="1760" y2="236" class="row-line"/>
+      <rect x="1378" y="239.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1390" y="251" class="badge-text">FK</text>
+      <text x="1410" y="251.4" class="field-text  fk-text">created_by_user_id : bigint</text>
+
+      <rect x="1370" y="258" width="390" height="22" class="row odd"/>
+      <line x1="1370" y1="258" x2="1760" y2="258" class="row-line"/>
+      <rect x="1378" y="261.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1390" y="273" class="badge-text">FK</text>
+      <text x="1410" y="273.4" class="field-text  fk-text">used_by_user_id : bigint</text>
+
+      <rect x="1370" y="280" width="390" height="22" class="row even"/>
+      <line x1="1370" y1="280" x2="1760" y2="280" class="row-line"/>
+      <circle cx="1390" cy="291" r="2.2" fill="#94a3b8"/>
+      <text x="1410" y="295.4" class="field-text  ">used_at : timestamp</text>
+
+      <rect x="1370" y="302" width="390" height="22" class="row odd"/>
+      <line x1="1370" y1="302" x2="1760" y2="302" class="row-line"/>
+      <circle cx="1390" cy="313" r="2.2" fill="#94a3b8"/>
+      <text x="1410" y="317.4" class="field-text  ">max_uses : int unsigned</text>
+
+      <rect x="1370" y="324" width="390" height="22" class="row even"/>
+      <line x1="1370" y1="324" x2="1760" y2="324" class="row-line"/>
+      <circle cx="1390" cy="335" r="2.2" fill="#94a3b8"/>
+      <text x="1410" y="339.4" class="field-text  ">used_count : int unsigned</text>
+
+      <rect x="1370" y="346" width="390" height="22" class="row odd"/>
+      <line x1="1370" y1="346" x2="1760" y2="346" class="row-line"/>
+      <circle cx="1390" cy="357" r="2.2" fill="#94a3b8"/>
+      <text x="1410" y="361.4" class="field-text  ">expires_at : timestamp</text>
+
+      <rect x="1370" y="368" width="390" height="22" class="row even"/>
+      <line x1="1370" y1="368" x2="1760" y2="368" class="row-line"/>
+      <circle cx="1390" cy="379" r="2.2" fill="#94a3b8"/>
+      <text x="1410" y="383.4" class="field-text  ">active : tinyint(1)</text>
+
+      <rect x="1370" y="390" width="390" height="22" class="row odd"/>
+      <line x1="1370" y1="390" x2="1760" y2="390" class="row-line"/>
+      <circle cx="1390" cy="401" r="2.2" fill="#94a3b8"/>
+      <text x="1410" y="405.4" class="field-text  ">revoked_at : timestamp</text>
+
+      <rect x="1370" y="412" width="390" height="22" class="row even"/>
+      <line x1="1370" y1="412" x2="1760" y2="412" class="row-line"/>
+      <rect x="1378" y="415.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1390" y="427" class="badge-text">FK</text>
+      <text x="1410" y="427.4" class="field-text  fk-text">revoked_by_user_id : bigint</text>
+
+      <rect x="1370" y="434" width="390" height="22" class="row odd"/>
+      <line x1="1370" y1="434" x2="1760" y2="434" class="row-line"/>
+      <circle cx="1390" cy="445" r="2.2" fill="#94a3b8"/>
+      <text x="1410" y="449.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="1370" y="456" width="390" height="22" class="row even"/>
+      <line x1="1370" y1="456" x2="1760" y2="456" class="row-line"/>
+      <circle cx="1390" cy="467" r="2.2" fill="#94a3b8"/>
+      <text x="1410" y="471.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="1370" y="120" width="390" height="358" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-organization_user_blocks">
+    <rect x="1840" y="190" width="380" height="204" rx="5" class="table-bg"/>
+    <rect x="1840" y="190" width="380" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 1840 213 L 2220 213 L 2220 218 L 1840 218 Z" fill="#0d6efd"/>
+    <text x="1851" y="208.5" class="table-title">organization_user_blocks</text>
+    
+      <rect x="1840" y="218" width="380" height="22" class="row even"/>
+      <line x1="1840" y1="218" x2="2220" y2="218" class="row-line"/>
+      <rect x="1848" y="221.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="1860" y="233" class="badge-text">PK</text>
+      <text x="1880" y="233.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="1840" y="240" width="380" height="22" class="row odd"/>
+      <line x1="1840" y1="240" x2="2220" y2="240" class="row-line"/>
+      <rect x="1848" y="243.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1860" y="255" class="badge-text">FK</text>
+      <text x="1880" y="255.4" class="field-text  fk-text">organization_id : bigint</text>
+
+      <rect x="1840" y="262" width="380" height="22" class="row even"/>
+      <line x1="1840" y1="262" x2="2220" y2="262" class="row-line"/>
+      <rect x="1848" y="265.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1860" y="277" class="badge-text">FK</text>
+      <text x="1880" y="277.4" class="field-text  fk-text">user_id : bigint</text>
+
+      <rect x="1840" y="284" width="380" height="22" class="row odd"/>
+      <line x1="1840" y1="284" x2="2220" y2="284" class="row-line"/>
+      <rect x="1848" y="287.8" width="24" height="14.4" rx="3" class="badge fk"/><text x="1860" y="299" class="badge-text">FK</text>
+      <text x="1880" y="299.4" class="field-text  fk-text">created_by_user_id : bigint</text>
+
+      <rect x="1840" y="306" width="380" height="22" class="row even"/>
+      <line x1="1840" y1="306" x2="2220" y2="306" class="row-line"/>
+      <circle cx="1860" cy="317" r="2.2" fill="#94a3b8"/>
+      <text x="1880" y="321.4" class="field-text  ">reason : varchar(255)</text>
+
+      <rect x="1840" y="328" width="380" height="22" class="row odd"/>
+      <line x1="1840" y1="328" x2="2220" y2="328" class="row-line"/>
+      <circle cx="1860" cy="339" r="2.2" fill="#94a3b8"/>
+      <text x="1880" y="343.4" class="field-text  ">active : tinyint(1)</text>
+
+      <rect x="1840" y="350" width="380" height="22" class="row even"/>
+      <line x1="1840" y1="350" x2="2220" y2="350" class="row-line"/>
+      <circle cx="1860" cy="361" r="2.2" fill="#94a3b8"/>
+      <text x="1880" y="365.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="1840" y="372" width="380" height="22" class="row odd"/>
+      <line x1="1840" y1="372" x2="2220" y2="372" class="row-line"/>
+      <circle cx="1860" cy="383" r="2.2" fill="#94a3b8"/>
+      <text x="1880" y="387.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="1840" y="190" width="380" height="204" rx="5" class="table-border"/>
+  </g>
+
+  <g class="table" id="table-system_settings">
+    <rect x="2860" y="1220" width="360" height="160" rx="5" class="table-bg"/>
+    <rect x="2860" y="1220" width="360" height="28" rx="5" fill="#0d6efd"/>
+    <path d="M 2860 1243 L 3220 1243 L 3220 1248 L 2860 1248 Z" fill="#0d6efd"/>
+    <text x="2871" y="1238.5" class="table-title">system_settings</text>
+    
+      <rect x="2860" y="1248" width="360" height="22" class="row even"/>
+      <line x1="2860" y1="1248" x2="3220" y2="1248" class="row-line"/>
+      <rect x="2868" y="1251.8" width="24" height="14.4" rx="3" class="badge pk"/><text x="2880" y="1263" class="badge-text">PK</text>
+      <text x="2900" y="1263.4" class="field-text pk-text ">id : bigint</text>
+
+      <rect x="2860" y="1270" width="360" height="22" class="row odd"/>
+      <line x1="2860" y1="1270" x2="3220" y2="1270" class="row-line"/>
+      <circle cx="2880" cy="1281" r="2.2" fill="#94a3b8"/>
+      <text x="2900" y="1285.4" class="field-text  ">key : varchar(255)</text>
+
+      <rect x="2860" y="1292" width="360" height="22" class="row even"/>
+      <line x1="2860" y1="1292" x2="3220" y2="1292" class="row-line"/>
+      <circle cx="2880" cy="1303" r="2.2" fill="#94a3b8"/>
+      <text x="2900" y="1307.4" class="field-text  ">value : text</text>
+
+      <rect x="2860" y="1314" width="360" height="22" class="row odd"/>
+      <line x1="2860" y1="1314" x2="3220" y2="1314" class="row-line"/>
+      <circle cx="2880" cy="1325" r="2.2" fill="#94a3b8"/>
+      <text x="2900" y="1329.4" class="field-text  ">description : varchar(255)</text>
+
+      <rect x="2860" y="1336" width="360" height="22" class="row even"/>
+      <line x1="2860" y1="1336" x2="3220" y2="1336" class="row-line"/>
+      <circle cx="2880" cy="1347" r="2.2" fill="#94a3b8"/>
+      <text x="2900" y="1351.4" class="field-text  ">created_at : timestamp</text>
+
+      <rect x="2860" y="1358" width="360" height="22" class="row odd"/>
+      <line x1="2860" y1="1358" x2="3220" y2="1358" class="row-line"/>
+      <circle cx="2880" cy="1369" r="2.2" fill="#94a3b8"/>
+      <text x="2900" y="1373.4" class="field-text  ">updated_at : timestamp</text>
+    <rect x="2860" y="1220" width="360" height="160" rx="5" class="table-border"/>
+  </g></g>
+  <g class="legend" transform="translate(2870 1800)"><text x="0" y="0" class="legend-title">Legend</text><rect x="0" y="14" width="24" height="14" rx="3" class="badge pk"/><text x="12" y="25" class="badge-text">PK</text><text x="34" y="25">primary key</text><rect x="0" y="38" width="24" height="14" rx="3" class="badge fk"/><text x="12" y="49" class="badge-text">FK</text><text x="34" y="49">foreign key</text><line x1="0" y1="72" x2="72" y2="72" class="rel-line" style="stroke:#0891b2"/><text x="84" y="76">FK → referenced id</text></g>
+</svg>

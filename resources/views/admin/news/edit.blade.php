@@ -123,20 +123,15 @@
                     <input id="published_date" name="published_date" type="date" value="{{ old('published_date', $news->published_date->format('Y-m-d')) }}" required oninput="document.getElementById('previewDate').textContent=this.value.split('-').reverse().join('.')">
                 </div>
 
-                @if(in_array($admin->role, ['admin','super_admin']))
-                <div class="field">
-                    <div class="field-label">ЖКХ (пусто — видна всем)</div>
-                    <select name="organization_id">
-                        <option value="">🌐 Для всех</option>
-                        @foreach($organizations as $org)
-                            <option value="{{ $org->id }}" @selected(old('organization_id', $news->organization_id) == $org->id)>{{ $org->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                @else
+                @if($admin->role === 'org_admin')
                 <div class="field">
                     <div class="field-label">Организация</div>
                     <div class="key-chip" style="font-family:var(--font);">{{ $admin->organization->name ?? '—' }}</div>
+                </div>
+                @else
+                <div class="field">
+                    <div class="field-label">Область публикации</div>
+                    <div class="key-chip" style="font-family:var(--font);">Платформа</div>
                 </div>
                 @endif
 

@@ -143,13 +143,7 @@
             <button type="submit">Войти</button>
         </form>
 
-        @if(app()->isLocal())
-        <div class="hint">
-            <strong>Тестовый доступ:</strong><br>
-            super_admin: admin@clean-city.local / password<br>
-            org_admin: egor@gmail.com / password123
-        </div>
-        @endif
+       
     </section>
 </div>
 </body>

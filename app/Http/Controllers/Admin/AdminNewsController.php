@@ -6,7 +6,6 @@ use App\Http\Controllers\Admin\Concerns\AdminAccess;
 use App\Http\Controllers\Controller;
 use App\Models\News;
 use App\Models\NewsPhoto;
-use App\Models\Organization;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -23,7 +22,7 @@ class AdminNewsController extends Controller
     private function scopeForAdmin($query, $admin)
     {
         if (in_array($admin->role, ['admin', 'super_admin'], true)) {
-            return $query;
+            return $query->whereNull('organization_id');
         }
         // org_admin sees their own + platform-wide (organization_id = null)
         return $query->where(function ($q) use ($admin) {
@@ -47,9 +46,7 @@ class AdminNewsController extends Controller
     public function create()
     {
         $admin = $this->authorizeNews();
-        $organizations = in_array($admin->role, ['admin', 'super_admin'], true)
-            ? Organization::orderBy('name')->get()
-            : collect();
+        $organizations = collect();
         return view('admin.news.create', compact('admin', 'organizations'));
     }
 
@@ -70,8 +67,6 @@ class AdminNewsController extends Controller
         $orgId = null;
         if ($admin->role === 'org_admin') {
             $orgId = $admin->organization_id;
-        } elseif (!empty($data['organization_id'])) {
-            $orgId = $data['organization_id'];
         }
 
         $news = News::create([
@@ -98,9 +93,7 @@ class AdminNewsController extends Controller
         $admin = $this->authorizeNews();
         $this->checkOwnership($news, $admin);
         $news->load('photos');
-        $organizations = in_array($admin->role, ['admin', 'super_admin'], true)
-            ? Organization::orderBy('name')->get()
-            : collect();
+        $organizations = collect();
         return view('admin.news.edit', compact('news', 'admin', 'organizations'));
     }
 
@@ -129,7 +122,7 @@ class AdminNewsController extends Controller
         ];
 
         if (in_array($admin->role, ['admin', 'super_admin'], true)) {
-            $updateData['organization_id'] = $data['organization_id'] ?? null;
+            $updateData['organization_id'] = null;
         }
 
         $news->update($updateData);
@@ -169,6 +162,9 @@ class AdminNewsController extends Controller
     private function checkOwnership(News $news, $admin): void
     {
         if (in_array($admin->role, ['admin', 'super_admin'], true)) {
+            if ($news->organization_id !== null) {
+                abort(403, 'Главный администратор работает только с общими новостями платформы');
+            }
             return;
         }
         // org_admin can only edit their org's news

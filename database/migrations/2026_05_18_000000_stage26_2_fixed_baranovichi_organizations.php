@@ -54,7 +54,7 @@ return new class extends Migration
         DB::table('organizations')->whereNotIn('id', array_keys($items))->update(['active' => false, 'updated_at' => $now]);
        if (DB::getDriverName() === 'mysql') {
     DB::statement('ALTER TABLE organizations AUTO_INCREMENT = 8');
-}
+}   
         DB::table('users')->where('role', 'admin')->update(['role' => 'super_admin', 'updated_at' => $now]);
 
         foreach ($items as $id => [$name]) {

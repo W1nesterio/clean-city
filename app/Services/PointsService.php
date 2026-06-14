@@ -27,15 +27,19 @@ class PointsService
 
     public static function pointsForCompletion(): int
     {
-        return (int) DB::table('system_settings')
+        $value = DB::table('system_settings')
             ->where('key', 'points_per_ticket_completion')
-            ->value('value') ?? 10;
+            ->value('value');
+
+        return (int) ($value ?? 10);
     }
 
     public static function pointsForCreation(): int
     {
-        return (int) DB::table('system_settings')
+        $value = DB::table('system_settings')
             ->where('key', 'points_per_ticket_creation')
-            ->value('value') ?? 5;
+            ->value('value');
+
+        return (int) ($value ?? 5);
     }
 }

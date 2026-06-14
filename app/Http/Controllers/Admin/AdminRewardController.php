@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\Concerns\AdminAccess;
 use App\Http\Controllers\Controller;
-use App\Models\Organization;
 use App\Models\Reward;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -25,7 +24,9 @@ class AdminRewardController extends Controller
 
         $query = Reward::with(['author', 'organization'])->orderByDesc('id');
 
-        if ($admin->role === 'org_admin') {
+        if (in_array($admin->role, ['admin', 'super_admin'], true)) {
+            $query->whereNull('organization_id');
+        } elseif ($admin->role === 'org_admin') {
             $query->where(function ($q) use ($admin) {
                 $q->where('organization_id', $admin->organization_id)
                   ->orWhereNull('organization_id');
@@ -33,9 +34,7 @@ class AdminRewardController extends Controller
         }
 
         $rewards = $query->paginate(20);
-        $organizations = in_array($admin->role, ['admin', 'super_admin'])
-            ? Organization::where('active', true)->orderBy('name')->get()
-            : collect();
+        $organizations = collect();
 
         return view('admin.rewards.index', compact('rewards', 'admin', 'organizations'));
     }
@@ -43,9 +42,7 @@ class AdminRewardController extends Controller
     public function create()
     {
         $admin = $this->authorizeRewards();
-        $organizations = in_array($admin->role, ['admin', 'super_admin'])
-            ? Organization::where('active', true)->orderBy('name')->get()
-            : collect();
+        $organizations = collect();
 
         return view('admin.rewards.create', compact('admin', 'organizations'));
     }
@@ -73,7 +70,7 @@ class AdminRewardController extends Controller
 
         $orgId = match ($admin->role) {
             'org_admin'  => $admin->organization_id,
-            default      => ($data['organization_id'] ?? null),
+            default      => null,
         };
 
         Reward::create([
@@ -97,9 +94,7 @@ class AdminRewardController extends Controller
         $admin = $this->authorizeRewards();
         $this->checkOwnership($reward, $admin);
 
-        $organizations = in_array($admin->role, ['admin', 'super_admin'])
-            ? Organization::where('active', true)->orderBy('name')->get()
-            : collect();
+        $organizations = collect();
 
         return view('admin.rewards.edit', compact('reward', 'admin', 'organizations'));
     }
@@ -136,7 +131,7 @@ class AdminRewardController extends Controller
 
         $orgId = match ($admin->role) {
             'org_admin' => $reward->organization_id, // cannot change
-            default     => ($data['organization_id'] ?? null),
+            default     => null,
         };
 
         $reward->update([
@@ -169,10 +164,15 @@ class AdminRewardController extends Controller
 
     private function checkOwnership(Reward $reward, $admin): void
     {
-        if ($admin->role === 'org_admin') {
-            if ($reward->organization_id && (int) $reward->organization_id !== (int) $admin->organization_id) {
-                abort(403, 'Нет доступа к этому вознаграждению');
+        if (in_array($admin->role, ['admin', 'super_admin'], true)) {
+            if ($reward->organization_id !== null) {
+                abort(403, 'Главный администратор работает только с общими купонами платформы');
             }
+            return;
+        }
+
+        if ($admin->role === 'org_admin' && (int) $reward->organization_id !== (int) $admin->organization_id) {
+            abort(403, 'Нет доступа к этому вознаграждению');
         }
     }
 }

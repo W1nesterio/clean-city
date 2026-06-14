@@ -6,7 +6,7 @@
 
 @push('head')
 <style>
-    .users-toolbar{display:grid;grid-template-columns:1.4fr 180px 210px 170px auto auto;gap:12px;align-items:end}
+    .users-toolbar{display:grid;grid-template-columns:1.4fr 180px 170px auto auto;gap:12px;align-items:end}
     .user-metrics{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin-bottom:16px}
     .user-metric{background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);border-radius:20px;padding:16px 18px}
     .user-metric strong{display:block;font-size:26px;line-height:1;letter-spacing:-.04em;color:var(--text)}
@@ -23,7 +23,7 @@
 <div class="page-head">
     <div>
         <h1 class="page-title">Пользователи</h1>
-        <p class="page-description">Главный админ здесь только ищет пользователей и блокирует спам. Роли и ЖКХ не меняются из общего списка.</p>
+        <p class="page-description">Главный админ здесь ищет пользователей и блокирует спам. Операционная работа с заявками и ЖКХ вынесена из этого раздела.</p>
     </div>
 </div>
 
@@ -40,21 +40,18 @@
     <form method="GET" action="{{ route('admin.users.index') }}" class="users-toolbar">
         <div class="field"><label>Поиск</label><input type="text" name="search" value="{{ request('search') }}" placeholder="Имя или email"></div>
         <div class="field"><label>Роль</label><select name="role"><option value="">Все</option>@foreach($roleLabels as $role=>$label)<option value="{{ $role }}" @selected(request('role')===$role)>{{ $label }}</option>@endforeach</select></div>
-        <div class="field"><label>ЖКХ</label><select name="organization_id"><option value="">Все</option>@foreach($organizations as $organization)<option value="{{ $organization->id }}" @selected((string)request('organization_id')===(string)$organization->id)>{{ $organization->name }}</option>@endforeach</select></div>
         <div class="field"><label>Статус</label><select name="state"><option value="">Все</option><option value="active" @selected(request('state')==='active')>Активные</option><option value="banned" @selected(request('state')==='banned')>Забанены</option></select></div>
         <button class="btn btn-primary" type="submit">Найти</button><a class="reset-link" href="{{ route('admin.users.index') }}">Сбросить</a>
     </form>
 </div></div>
 
 <div class="card"><div class="card-body" style="padding:0;overflow:hidden;">
-    <div class="users-table-wrap"><table class="users-table"><thead><tr><th>Пользователь</th><th>Роль</th><th>ЖКХ</th><th>Заявки</th><th>Статус</th><th>Действие</th></tr></thead><tbody>
+    <div class="users-table-wrap"><table class="users-table"><thead><tr><th>Пользователь</th><th>Роль</th><th>Статус</th><th>Действие</th></tr></thead><tbody>
     @forelse($users as $user)
         @php $isLockedSuperAdmin = in_array($user->role, ['admin','super_admin'], true); @endphp
         <tr class="{{ $user->banned_at ? 'banned-row' : '' }}">
             <td><div class="user-cell"><div class="user-avatar">{{ mb_substr($user->name ?: $user->email,0,1) }}</div><div><div class="user-name">{{ $user->name }}</div><div class="user-email">{{ $user->email }}</div><div class="ticket-meta">создан: {{ $user->created_at?->format('d.m.Y H:i') }}</div></div></div></td>
             <td><span class="status-pill">{{ $roleLabels[$user->role] ?? $user->role }}</span></td>
-            <td>{{ $user->organization->name ?? '—' }}</td>
-            <td><b>{{ $user->tickets_count }}</b><div class="ticket-meta">назначено: {{ $user->assigned_tickets_count }}</div></td>
             <td>@if($user->banned_at)<span class="status-pill status-rejected">Забанен</span><div class="state-note">{{ $user->ban_reason }}</div>@else<span class="status-pill status-completed">Активен</span>@endif</td>
             <td>
                 @if($isLockedSuperAdmin)
@@ -67,7 +64,7 @@
                 @endif
             </td>
         </tr>
-    @empty <tr><td colspan="6" class="empty-state">Пользователи не найдены.</td></tr> @endforelse
+    @empty <tr><td colspan="4" class="empty-state">Пользователи не найдены.</td></tr> @endforelse
     </tbody></table></div>
     <div style="padding:18px 22px;">{{ $users->links() }}</div>
 </div></div>

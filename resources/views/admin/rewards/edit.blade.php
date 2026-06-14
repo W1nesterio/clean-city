@@ -92,20 +92,15 @@
                     <input id="valid_to" name="valid_to" type="date" value="{{ old('valid_to', $reward->valid_to?->format('Y-m-d')) }}">
                 </div>
 
-                @if(in_array($admin->role, ['admin','super_admin']))
-                <div class="field">
-                    <label for="organization_id">Организация (пусто — платформенная)</label>
-                    <select name="organization_id" id="organization_id">
-                        <option value="">🌐 Для всех</option>
-                        @foreach($organizations as $org)
-                            <option value="{{ $org->id }}" @selected(old('organization_id', $reward->organization_id) == $org->id)>{{ $org->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                @else
+                @if($admin->role === 'org_admin')
                 <div class="field">
                     <label>Организация</label>
                     <div class="key-chip">{{ $admin->organization->name ?? '—' }}</div>
+                </div>
+                @else
+                <div class="field">
+                    <label>Область купона</label>
+                    <div class="key-chip">Платформа</div>
                 </div>
                 @endif
 

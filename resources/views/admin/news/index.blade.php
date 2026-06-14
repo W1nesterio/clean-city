@@ -65,11 +65,15 @@
                     </td>
                     <td class="txt-muted">{{ $item->author?->name ?? '—' }}</td>
                     <td class="row-actions">
+                        @if(!$isOrgAdmin || (int) $item->organization_id === (int) auth()->user()->organization_id)
                         <a href="{{ route('admin.news.edit', $item) }}" class="btn ghost sm">Редактировать</a>
                         <form method="POST" action="{{ route('admin.news.destroy', $item) }}" style="display:inline-flex;margin-left:4px;" onsubmit="return confirm('Удалить новость «{{ addslashes($item->title) }}»?')">
                             @csrf @method('DELETE')
                             <button type="submit" class="btn danger-ghost sm">Удалить</button>
                         </form>
+                        @else
+                            <span class="pill pill-gray no-dot">Общая</span>
+                        @endif
                     </td>
                 </tr>
                 @endforeach

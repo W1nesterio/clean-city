@@ -2,7 +2,7 @@
 
 @section('title', auth()->user()->role === 'org_admin' ? 'Обзор ЖКХ' : 'Контроль платформы')
 @section('topbar-title', auth()->user()->role === 'org_admin' ? 'Обзор ЖКХ' : 'Контроль платформы')
-@section('topbar-subtitle', auth()->user()->role === 'org_admin' ? 'Очередь, сотрудники и состояние работ' : 'Пользователи, блокировки и фиксированный список ЖКХ')
+@section('topbar-subtitle', auth()->user()->role === 'org_admin' ? 'Очередь, сотрудники и состояние работ' : 'Пользователи, купоны, новости и баллы')
 
 @push('head')
 <style>
@@ -26,7 +26,7 @@
     <div class="page-head">
         <div>
             <h1 class="page-title">Панель главного администратора</h1>
-            <p class="page-description">Здесь нет реестра заявок, карты и ключей сотрудников. Главный админ контролирует платформу, пользователей и список ЖКХ.</p>
+            <p class="page-description">Здесь нет реестра заявок, карты, сотрудников и разделов ЖКХ. Главный админ контролирует платформенные аккаунты, новости, купоны и баллы.</p>
         </div>
         <a class="btn btn-primary" href="{{ route('admin.users.index') }}">Пользователи</a>
     </div>
@@ -34,22 +34,18 @@
     <div class="metric-grid" style="margin-bottom:20px;">
         <div class="metric-card accent"><div class="metric-label">Пользователи</div><div class="metric-value">{{ $summary['users'] }}</div><div class="metric-hint">все аккаунты платформы</div></div>
         <div class="metric-card"><div class="metric-label">Забанены</div><div class="metric-value">{{ $summary['banned'] }}</div><div class="metric-hint">глобальная блокировка</div></div>
-        <div class="metric-card"><div class="metric-label">ЖКХ</div><div class="metric-value">{{ $summary['organizations'] }}</div><div class="metric-hint">фиксированный справочник</div></div>
-        <div class="metric-card"><div class="metric-label">Админы ЖКХ</div><div class="metric-value">{{ $summary['org_admins'] }}</div><div class="metric-hint">ответственные организации</div></div>
+        <div class="metric-card"><div class="metric-label">Новости</div><div class="metric-value">{{ $summary['news'] }}</div><div class="metric-hint">активные публикации</div></div>
+        <div class="metric-card"><div class="metric-label">Купоны</div><div class="metric-value">{{ $summary['rewards'] }}</div><div class="metric-hint">активные вознаграждения</div></div>
     </div>
 
     <div class="dash-grid">
         <div class="card"><div class="card-body">
-            <div class="section-line"><div><h2 class="card-title">Фиксированные ЖКХ Барановичей</h2><div class="card-muted">Справочник не создаётся вручную. Активные организации уже занесены в систему.</div></div><a class="btn btn-light btn-sm" href="{{ route('admin.organizations.index') }}">Открыть</a></div>
-            <div style="margin-top:16px;">
-                @foreach($organizations as $organization)
-                    <div class="org-mini">
-                        <div><b>{{ $organization->name }}</b><div class="ticket-meta">{{ $organization->address ?: 'Адрес не указан' }}</div></div>
-                        <div class="org-count"><b>{{ $organization->admins_count }}</b><span>админов</span></div>
-                        <div class="org-count"><b>{{ $organization->workers_count }}</b><span>сотрудников</span></div>
-                        <div class="org-count"><b>{{ $organization->tickets_count }}</b><span>заявок</span></div>
-                    </div>
-                @endforeach
+            <h2 class="card-title">Платформенные разделы</h2>
+            <div class="quick-list" style="margin-top:14px;">
+                <div class="quick-item"><div><div class="quick-title">Пользователи</div><div class="quick-sub">Поиск аккаунтов и глобальная блокировка нарушителей</div></div><a class="btn btn-light btn-sm" href="{{ route('admin.users.index') }}">Открыть</a></div>
+                <div class="quick-item"><div><div class="quick-title">Новости</div><div class="quick-sub">Публикации для приложения и сайта</div></div><a class="btn btn-light btn-sm" href="{{ route('admin.news.index') }}">Открыть</a></div>
+                <div class="quick-item"><div><div class="quick-title">Купоны</div><div class="quick-sub">Вознаграждения и промокоды для пользователей</div></div><a class="btn btn-light btn-sm" href="{{ route('admin.rewards.index') }}">Открыть</a></div>
+                <div class="quick-item"><div><div class="quick-title">Баллы</div><div class="quick-sub">Ручная корректировка баланса жителей</div></div><a class="btn btn-light btn-sm" href="{{ route('admin.points.index') }}">Открыть</a></div>
             </div>
         </div></div>
 

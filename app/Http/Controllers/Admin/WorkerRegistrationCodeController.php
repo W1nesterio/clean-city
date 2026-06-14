@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Admin\Concerns\AdminAccess;
 use App\Http\Controllers\Controller;
 use App\Models\Organization;
 use App\Models\WorkerRegistrationCode;
@@ -11,15 +12,19 @@ use Illuminate\Validation\Rule;
 
 class WorkerRegistrationCodeController extends Controller
 {
+    use AdminAccess;
+
     public function index()
     {
-        $this->checkAdmin();
+        $admin = $this->requireOrgAdmin();
 
         $codes = WorkerRegistrationCode::with(['organization', 'createdBy', 'usedBy'])
+            ->where('organization_id', $admin->organization_id)
             ->latest()
             ->paginate(20);
 
         $organizations = Organization::where('active', true)
+            ->where('id', $admin->organization_id)
             ->orderBy('name')
             ->get();
 
@@ -28,7 +33,7 @@ class WorkerRegistrationCodeController extends Controller
 
     public function store(Request $request)
     {
-        $this->checkAdmin();
+        $admin = $this->requireOrgAdmin();
 
         $data = $request->validate([
             'organization_id' => ['required', 'integer', 'exists:organizations,id'],
@@ -45,7 +50,7 @@ class WorkerRegistrationCodeController extends Controller
 
         WorkerRegistrationCode::create([
             'code' => $code,
-            'organization_id' => $data['organization_id'],
+            'organization_id' => $admin->organization_id,
             'created_by_user_id' => Auth::id(),
             'max_uses' => $data['max_uses'],
             'used_count' => 0,
@@ -62,7 +67,11 @@ class WorkerRegistrationCodeController extends Controller
 
     public function deactivate(WorkerRegistrationCode $workerCode)
     {
-        $this->checkAdmin();
+        $admin = $this->requireOrgAdmin();
+
+        if ((int) $workerCode->organization_id !== (int) $admin->organization_id) {
+            abort(403, 'Код не относится к вашей организации');
+        }
 
         $workerCode->update([
             'active' => false,
@@ -94,15 +103,4 @@ class WorkerRegistrationCodeController extends Controller
         return $part;
     }
 
-    private function checkAdmin(): void
-    {
-        if (!Auth::check()) {
-            redirect()->route('admin.login')->send();
-            exit;
-        }
-
-        if (Auth::user()->role !== 'admin') {
-            abort(403, 'Доступ запрещён');
-        }
-    }
 }

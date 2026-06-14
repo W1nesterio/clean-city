@@ -15,13 +15,13 @@ class AdminOrganizationController extends Controller
 
     public function index(Request $request)
     {
-        $this->requireSuperAdmin();
+        $admin = $this->requireOrgAdmin();
 
         $query = Organization::withCount([
             'admins',
             'workers',
             'tickets' => fn ($q) => $q->whereNull('deleted_at'),
-        ]);
+        ])->where('id', $admin->organization_id);
 
         if ($request->filled('search')) {
             $search = trim((string) $request->search);
@@ -34,11 +34,13 @@ class AdminOrganizationController extends Controller
 
         $organizations = $query->with('city')->where('active', true)->orderBy('id')->paginate(20)->withQueryString();
 
+        $summaryBase = Organization::where('id', $admin->organization_id)->where('active', true);
+
         $summary = [
-            'total' => Organization::where('active', true)->count(),
-            'admins' => Organization::where('active', true)->withCount('admins')->get()->sum('admins_count'),
-            'workers' => Organization::where('active', true)->withCount('workers')->get()->sum('workers_count'),
-            'tickets' => Organization::where('active', true)->withCount(['tickets' => fn ($q) => $q->whereNull('deleted_at')])->get()->sum('tickets_count'),
+            'total' => (clone $summaryBase)->count(),
+            'admins' => (clone $summaryBase)->withCount('admins')->get()->sum('admins_count'),
+            'workers' => (clone $summaryBase)->withCount('workers')->get()->sum('workers_count'),
+            'tickets' => (clone $summaryBase)->withCount(['tickets' => fn ($q) => $q->whereNull('deleted_at')])->get()->sum('tickets_count'),
         ];
 
         return view('admin.organizations.index', compact('organizations', 'summary'));
@@ -46,7 +48,11 @@ class AdminOrganizationController extends Controller
 
     public function show(Organization $organization)
     {
-        $this->requireSuperAdmin();
+        $admin = $this->requireOrgAdmin();
+
+        if ((int) $organization->id !== (int) $admin->organization_id) {
+            abort(403, 'Организация не относится к вашему аккаунту');
+        }
 
         $organization->load('city');
 
